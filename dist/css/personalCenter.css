@@ -261,7 +261,8 @@ input {
       line-height: 58px;
       font-size: 18px;
       text-align: center;
-      color: #3b3b3b; }
+      color: #3b3b3b;
+      font-weight: bold; }
       .personal-center-left-menu ul li a.active {
         background-color: #fff;
         border-left: 4px #F5674B solid;
@@ -281,10 +282,7 @@ input {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #FFFFFF;
-  display: none; }
-  .rightMenu.active {
-    display: block; }
+  background-color: #FFFFFF; }
   .rightMenu .menu-header {
     margin: 0  20px;
     height: 58px;
@@ -293,7 +291,6 @@ input {
     .rightMenu .menu-header h3 {
       font-size: 24px;
       font-weight: bold;
-      color: #F5674B;
       float: left; }
     .rightMenu .menu-header p {
       font-size: 16px;
@@ -340,7 +337,66 @@ input {
       line-height: 40px;
       text-align: center;
       background-color: #F5674B;
-      color: #fff; }
+      color: #fff;
+      border-radius: 4px; }
 
-.personal-information-inner .modify-phon-number {
-  z-index: 4; }
+.fixInfomation {
+  display: none; }
+  .fixInfomation .modify-details {
+    margin: 0px auto 0; }
+    .fixInfomation .modify-details h3 {
+      margin: 30px auto 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #3b3b3b;
+      text-align: center; }
+    .fixInfomation .modify-details .modify-details-wrap {
+      padding: 40px 0px 0;
+      width: 660px;
+      height: 400px;
+      margin: 0 auto 0;
+      position: relative;
+      background-color: #EDEDED; }
+      .fixInfomation .modify-details .modify-details-wrap form {
+        width: 430px;
+        margin: 0 auto 0; }
+        .fixInfomation .modify-details .modify-details-wrap form p {
+          overflow: hidden;
+          margin-bottom: 30px; }
+          .fixInfomation .modify-details .modify-details-wrap form p label, .fixInfomation .modify-details .modify-details-wrap form p input {
+            float: left;
+            color: #3b3b3b; }
+          .fixInfomation .modify-details .modify-details-wrap form p label {
+            font-size: 14px;
+            width: 74px;
+            height: 40px;
+            line-height: 40px;
+            text-align: right;
+            margin-right: 8px; }
+          .fixInfomation .modify-details .modify-details-wrap form p input {
+            width: 330px;
+            height: 16px;
+            line-height: 16px;
+            padding: 12px 8px;
+            font-size: 16px;
+            border-radius: 4px; }
+            .fixInfomation .modify-details .modify-details-wrap form p input :focus,
+            .fixInfomation .modify-details .modify-details-wrap form p input .focus {
+              border: 1px solid #F5674B; }
+      .fixInfomation .modify-details .modify-details-wrap .button {
+        position: absolute;
+        bottom: 76px;
+        left: 154px;
+        width: 428px;
+        height: 40px; }
+        .fixInfomation .modify-details .modify-details-wrap .button a {
+          display: block;
+          width: 138px;
+          height: 40px;
+          margin-right: 76px;
+          line-height: 40px;
+          text-align: center;
+          color: #fff;
+          background-color: #F5674B;
+          float: left;
+          border-radius: 4px; }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <script src="./lib/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/item.css">
+    <title>item</title>
+</head>
+<body>
+@@include('./include/personalCenterHeader.html')
+<div class="wrap mediate">
+    <div class="personal-center-left-menu">
+        <ul>
+            <li>
+                <a href="./personalCenter.html" >个人信息</a>
+            </li>
+            <li>
+                <a href="./valuationHistory.html" class="active">估值历史</a>
+            </li>
+        </ul>
+    </div>
+    <div class="valuation-history-details rightMenu">
+        <div class="menu-header">
+            <h3>估值历史详情</h3>
+            <p>Valuation History  Details</p>
+        </div>
+        <div class="valuation-history-details-wrap">
+            <div class="valuation-detail">
+                <h4>估值结果</h4>
+                <p class="final-result">
+                    根据贵公司所提供的基本信息并综合可比行业公司情况、2016年平均市盈率；以及企业与行业市场的成长性、技术领先型、企业管理者能力和风险分析，我们采用心流估值法计算的贵公司的估值为    
+                    <span>9504万元~11232万元</span>
+                </p>
+            </div>
+            <div class="valuation-detail company-infomation">
+                <h4>企业基本信息</h4>
+                <div>
+                    <p>
+                        <strong>估值名称:</strong>
+                        <em>121</em>
+                    </p>
+                    <p>
+                        <strong>企业所处阶段:</strong>
+                        <em>种子/天使</em>
+                    </p>
+                    <p>
+                        <strong>所属行业：</strong>
+                        <em>租赁和商务服务业</em>
+                    </p>
+                </div>
+            </div>
+            <div class="valuation-detail  soft-competitiveness">
+                <h4>软性指标</h4>
+                <div></div>
+                <ul>
+                    <li>点击查看企业竞争力</li>
+                    <li>点击查看团队竞争力</li>
+                    <li>点击查看技术竞争力</li>
+                    <li>点击查看风险指标</li>
+                </ul>
+            </div>
+            <div class="valuation-footer">
+                <strong>提示：</strong>
+                <div>
+                    <p>本估值建议所包含的分析基于各种假设及国际通行的估值方法，不同假设及方法可能导致分析结果出现重大不同，本建议采用的估值方法及模型有局限性，估值结果仅供参考
+                    </p>
+                    <p>如需要更多估值方法，请联系<a href="">service@flcccc.com</a>或者在线客户人员</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('./include/footer.html')
+</body>
+</html>

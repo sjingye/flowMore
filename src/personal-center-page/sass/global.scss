@@ -1,0 +1,31 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+$mainWidth: 1160px;
+$mainColor: #F5674B;
+$mainFontColor: #3b3b3b;
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.mediate {
+    margin: 0 auto;
+}
+
+.min-main-width{
+    min-width: $mainWidth;
+}
+
+.placeholder{
+    color: #aaa;
+}

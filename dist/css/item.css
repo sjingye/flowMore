@@ -299,63 +299,72 @@ input {
       margin-left: 16px;
       float: left; }
 
-.valuation-history table {
-  width: 920px;
-  margin: 26px auto 22px;
-  text-align: center; }
-  .valuation-history table thead {
-    text-align: center;
-    background-color: #EDEDED; }
-    .valuation-history table thead th {
-      text-align: center;
-      height: 50px;
-      line-height: 50px;
-      font-size: 20px;
-      color: #333;
-      font-weight: bold; }
-  .valuation-history table tbody tr {
-    height: 48px; }
-    .valuation-history table tbody tr.even {
-      background-color: #FFF3F3; }
-    .valuation-history table tbody tr.odd {
-      background-color: #FFF; }
-    .valuation-history table tbody tr td {
-      font-size: 14px;
-      line-height: 48px;
-      text-align: center;
-      color: #333; }
-      .valuation-history table tbody tr td a {
-        color: #F5674B; }
+.wrap .personal-center-left-menu ul {
+  height: 900px; }
 
-.valuation-history .pages-show {
-  position: absolute;
-  bottom: 20px;
-  left: 300px;
-  height: 28px;
-  line-height: 28px;
-  text-align: center; }
-  .valuation-history .pages-show > li {
-    float: left;
-    border: 1px solid #aaa;
-    padding: 0px 6px;
-    margin: 0 6px; }
-    .valuation-history .pages-show > li.active, .valuation-history .pages-show > li:hover {
-      color: #fff;
-      background-color: #F5674B; }
-    .valuation-history .pages-show > li ul {
-      overflow: hidden;
-      margin-right: -12px; }
-      .valuation-history .pages-show > li ul li {
-        float: left;
-        padding: 0 6px;
-        border: 1px solid #aaa; }
-    .valuation-history .pages-show > li.pages {
-      border: none; }
-      .valuation-history .pages-show > li.pages:hover {
-        color: #3b3b3b;
-        background-color: #fff; }
-      .valuation-history .pages-show > li.pages li {
-        margin-right: 12px; }
-        .valuation-history .pages-show > li.pages li:hover {
-          color: #fff;
-          background-color: #F5674B; }
+.valuation-history-details {
+  height: 900px; }
+
+.valuation-history-details-wrap {
+  margin: 0px 20px 0; }
+  .valuation-history-details-wrap .valuation-detail h4 {
+    line-height: 50px;
+    height: 50px;
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ededed;
+    text-indent: 18px;
+    margin: 30px 0; }
+  .valuation-history-details-wrap .valuation-detail p {
+    font-size: 14px;
+    color: #3b3b3b; }
+  .valuation-history-details-wrap .valuation-detail .final-result {
+    margin: 0 20px;
+    text-indent: 2em; }
+    .valuation-history-details-wrap .valuation-detail .final-result span {
+      color: #F5674B;
+      font-weight: bold; }
+  .valuation-history-details-wrap .company-infomation p {
+    margin: 0 20px;
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden; }
+    .valuation-history-details-wrap .company-infomation p strong {
+      width: 120px;
+      text-align: right;
+      display: block;
+      float: left; }
+    .valuation-history-details-wrap .company-infomation p em {
+      text-indent: 2em;
+      display: block;
+      float: left; }
+  .valuation-history-details-wrap .soft-competitiveness ul {
+    overflow: hidden; }
+    .valuation-history-details-wrap .soft-competitiveness ul li {
+      float: left;
+      width: 176px;
+      height: 38px;
+      margin: 0 26px;
+      line-height: 38px;
+      text-align: center;
+      border-radius: 4px;
+      color: #3b3b3b;
+      background-color: #E4E4E4; }
+      .valuation-history-details-wrap .soft-competitiveness ul li.active, .valuation-history-details-wrap .soft-competitiveness ul li:hover {
+        color: #fff;
+        background-color: #F5674B; }
+  .valuation-history-details-wrap .valuation-footer {
+    margin: 20px 0px;
+    overflow: hidden;
+    font-size: 12px; }
+    .valuation-history-details-wrap .valuation-footer strong {
+      float: left;
+      color: #F5674B; }
+    .valuation-history-details-wrap .valuation-footer div {
+      float: left;
+      width: 864px;
+      margin-left: 10px;
+      color: #3b3b3b; }
+      .valuation-history-details-wrap .valuation-footer div p a {
+        color: #F5674B; }

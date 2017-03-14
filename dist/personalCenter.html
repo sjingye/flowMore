@@ -42,7 +42,7 @@
 	</ul>
 </div>
 
-		<div class="personal-information rightMenu active">
+		<div class="personal-information rightMenu">
 			<div class="menu-header">
 				<h3>个人信息</h3>
 				<p>Personal Information</p>
@@ -73,18 +73,71 @@
 				</li>
 			</ul>
 		</div>
-        <div class="modify-phon-number rightMenu fixInfomation">
+        <div class="modify-phone-number rightMenu fixInfomation">
             <div class="menu-header">
                 <h3>修改手机号</h3>
                 <p>Modify Phone Number</p>
             </div>
+            <div class="modify-details">
+                <h3>修改手机号码</h3>
+                <div class="modify-details-wrap">
+                    <form>
+                        <p>
+                            <label for="">原手机号:</label>
+                            <input type="text" name="" class="old-phone">
+                        </p>
+                        <p>
+                            <label for="">验证码:</label>
+                            <input type="text" name="" class="verification-code-old">
+                        </p>
+                        <p>
+                            <label for="">新手机号:</label>
+                            <input type="text" name="" class="new-phone">
+                        </p>
+                        <p>
+                            <label for="">验证码:</label>
+                            <input type="text" name="" class="verification-code-new">
+                        </p>
+                    </form>
+                    <div class="button">
+                        <a href="">提交</a>
+                        <a href="">返回</a>
+                    </div>
+                </div>
+                <!-- end  modify-details-wrap -->
+            </div>
         </div>
+        <!-- end modify-phone-number -->
         <div class="modif-login-password rightMenu fixInfomation">
             <div class="menu-header">
                 <h3>修改登录密码</h3>
                 <p>Modify Login Password</p>
             </div>
+            <div class="modify-details">
+                <h3>修改登录密码</h3>
+                <div class="modify-details-wrap">
+                    <form>
+                        <p>
+                            <label for="">原密码:</label>
+                            <input type="text" name="" class="old-code focus">
+                        </p>
+                        <p>
+                            <label for="">新密码:</label>
+                            <input type="text" name="" class="new-code">
+                        </p>
+                        <p>
+                            <label for="">新密码确认:</label>
+                            <input type="text" name="" class="new-code-qy">
+                        </p>
+                    </form>
+                    <div class="button">
+                        <a href="">提交</a>
+                        <a href="">返回</a>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- end modif-login-password -->
 	</div>  
     <!--end wrap-->
 	<div class="footer">

@@ -1,0 +1,223 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+.header {
+    width: 100%;
+    height: 642px;
+    overflow: hidden;
+    .banner {
+        z-index: -1;
+        max-width: 100%;
+        height: 642px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .nav {
+        width: $mainWidth;
+        height: 94px;
+        overflow: hidden;
+        .logo {
+            width: 294px;
+            height: 85px;
+            margin-top: 8px;
+        }
+        .apply {
+            .language {
+                height: 60px;
+                width: 150px;
+                div {
+                    float: right;
+                    font-size: 14px;
+                    color: #FEFEFE;
+                    width: 50px;
+                    text-align: right;
+                    height: 60px;
+                    line-height: 60px;
+                    margin-left: 24px;
+                }
+            }
+            .log {
+                width: 161px;
+                height: 34px;
+                text-align: center;
+                line-height: 34px;
+                background-color: #fff;
+                font-size: 14px;
+                a {
+                    display: block;
+                    float: left;
+                    width: 80px;
+                    height: 34px;
+                    color: $mainFontColor;
+                    border-right: 1px solid #909090;
+                    &:hover,
+                    &.active {
+                        background-color: $mainColor;
+                        color: #fff;
+                    }
+                    &.last{
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+    .slogan {
+        margin: 84px auto 0;
+        img {
+            display: block;
+        }
+        .slogan-big {
+            width: 850px;
+        }
+        .slogan-little {
+            width: 410px;
+            margin: 16px auto 0;
+        }
+    }
+    .feed-in {
+        width: 700px;
+        margin: 70px auto 0;
+        form {
+            height: 60px;
+            input {
+                float: left;
+                line-height: 60px;
+            }
+            .inp {
+                width: 484px;
+                height: 60px;
+                font-size: 16px;
+                color: #3b3b3b;
+                line-height: 20px;
+                padding: 0 20px;
+                text-indent: 10px;
+            }
+            .inp-button {
+                width: 176px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                color: #fff;
+                font-size: 18px;
+                background-color: $mainColor;
+            }
+        }
+        ul {
+            display: none;
+            width: 524px;
+            height: 90px;
+            background: #f5f5f5;
+            li{
+                height: 30px;
+                line-height: 30px;
+                color: #3b3b3b;
+                text-indent: 16px;
+            }
+        }
+    }
+}
+
+.wrap {
+    width: $mainWidth;
+    .main {
+        position: relative;
+        height: 410px;
+        width: $mainWidth;
+        margin-bottom: 44px;
+        .ad-bg {
+            width: 196px;
+            height: 358px;
+            position: absolute;
+            left: 0;
+            top: 40px;
+            background-color: #F3D7D1;
+            z-index: -1;
+        }
+        .ad {
+            width: 154px;
+            height: 352px;
+            padding: 16px;
+            margin-top: 26px;
+            background-color: $mainColor;
+            z-index: 2;
+            .ad-header {
+                height: 60px;
+            }
+            h3 {
+                font-size: 20px;
+                color: #fff;
+                margin: 0px 0px 20px 0px;
+            }
+            .arrow {
+                background: url(../images/arrow.png) no-repeat 0 0;
+                width: 27px;
+                height: 27px;
+                margin: 0 8px 0 0;
+            }
+            p {
+                color: #fff;
+                line-height: 1.6em;
+            }
+            .ad-pic {
+                width: 103px;
+                height: 105px;
+                background: url(../images/ad-pic.png) no-repeat 0 0;
+                margin: 50px auto 70px;
+            }
+            .ad-slogan {
+                font-size: 16px;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+        ul {
+            float: left;
+            margin-top: 42px;
+            li {
+                float: left;
+                width: 278px;
+                height: 322px;
+                margin-left: 10px;
+                padding: 18px;
+                background: #fff;
+                position: relative;
+                &.last {
+                    margin-right: 0px;
+                }
+                h3 {
+                    color: $mainColor;
+                    font-size: 18px;
+                    text-align: center;
+                    font-weight: 600;
+                    margin-bottom: 24px;
+                }
+                p {
+                    color: #3B3B3B;
+                    line-height: 2.2em;
+                }
+                a {
+                    display: block;
+                    position: absolute;
+                    bottom: 40px;
+                    left: 92px;
+                    width: 130px;
+                    height: 34px;
+                    line-height: 34px;
+                    background-color: $mainColor;
+                    font-size: 16px;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 8px;
+                    &:hover {
+                        background-color: #D03719;
+                    }
+                }
+            }
+        }
+    }
+}
