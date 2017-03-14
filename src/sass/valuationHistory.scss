@@ -1,0 +1,89 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personalCenterCommon.scss";
+
+.valuation-history{
+     table{
+          width: 920px;
+          margin: 26px auto 22px;
+          text-align: center;
+          thead{
+               text-align: center;
+               background-color: #EDEDED;
+               th{
+                    text-align: center;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 20px;
+                    color: #333;
+                    font-weight: bold;
+               }
+          }
+          tbody{
+               tr{
+                   height: 48px;
+                   &.even{
+                         background-color: #FFF3F3;
+                   }
+                   &.odd{
+                         background-color: #FFF;
+                   }
+                   td{
+                         font-size: 14px;
+                         line-height: 48px;
+                         text-align: center;
+                         color: #333;
+                         a{
+                              color: $mainColor;
+                         }
+                   } 
+               }
+          }
+     }
+     .pages-show{
+          position: absolute;
+          bottom: 20px;
+          left: 300px;
+          height: 28px;
+          line-height: 28px;
+          text-align: center;
+          >li{
+               float: left;
+               border: 1px solid #aaa;
+               padding: 0px 6px;
+               margin: 0 6px;
+               &.active,
+               &:hover{
+                    color: #fff;
+                    background-color: $mainColor;
+               }
+               ul{
+                    overflow: hidden;
+                    margin-right: -12px;
+                    li{
+                         float: left;
+                         padding: 0 6px ;
+                         border: 1px solid #aaa;
+                    }
+               }
+               &.pages{
+                    border: none;
+                    &:hover{
+                         color: $mainFontColor;
+                         background-color: #fff;
+                    }
+                    li{
+                         margin-right: 12px;
+                         &:hover{
+                              color: #fff;
+                              background-color: $mainColor;
+                         }
+                    }
+               }
+          }
+     }
+}

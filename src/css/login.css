@@ -1,0 +1,290 @@
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #F3F3F3; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img,
+fieldset,
+img {
+  border: 0 none; }
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal; }
+
+strong {
+  font-weight: 800; }
+
+ol,
+ul,
+li {
+  list-style: none outside none; }
+
+caption,
+th {
+  text-align: left; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+a {
+  text-decoration: none; }
+
+input {
+  border: none; }
+
+.fr {
+  float: right; }
+
+.fl {
+  float: left; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+.mediate {
+  margin: 0 auto; }
+
+.min-main-width {
+  min-width: 1160px; }
+
+.placeholder {
+  color: #aaa; }
+
+.fr {
+  float: right; }
+
+.fl {
+  float: left; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+.mediate {
+  margin: 0 auto; }
+
+.min-main-width {
+  min-width: 1160px; }
+
+.placeholder {
+  color: #aaa; }
+
+.common-header {
+  min-width: 1160px;
+  box-sizing: border-box;
+  padding: 0 40px;
+  height: 94px;
+  background-color: #F3F3F3;
+  box-shadow: 0 0  6px 6px #909090; }
+  .common-header .common-logo {
+    display: block;
+    width: 294px;
+    height: 85px;
+    margin-top: 4px;
+    background: url("../images/logo-other.png") no-repeat 0 0; }
+  .common-header .guide {
+    display: block;
+    width: 134px;
+    height: 24px;
+    margin-top: 35px;
+    font-size: 16px;
+    color: #3B3B3B;
+    background: url("../images/guide-arrow.png") no-repeat 116px 2px; }
+
+.footer {
+  margin: 0px auto 0;
+  height: 210px;
+  width: 100%;
+  background-color: #EDEDED; }
+  .footer .footer-wrap {
+    box-sizing: border-box;
+    width: 1160px;
+    height: 210px;
+    padding: 44px 50px 24px;
+    color: #3B3B3B; }
+  .footer .custom-service {
+    width: 65px;
+    height: 64px;
+    background: url(../images/custom-service.png) no-repeat 0 0; }
+  .footer .service-time {
+    width: 256px;
+    height: 132px;
+    margin: 0px 0 0 24px;
+    border-right: 1px solid #B4B4B4; }
+    .footer .service-time h2 {
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 1.2em;
+      margin-top: 10px; }
+    .footer .service-time p {
+      font-size: 14px; }
+  .footer .company-service {
+    width: 570px;
+    height: 132px;
+    padding-left: 24px; }
+    .footer .company-service ul {
+      margin-bottom: 10px;
+      overflow: hidden; }
+      .footer .company-service ul li {
+        font-size: 16px;
+        color: #3B3B3B;
+        margin-right: 40px;
+        float: left; }
+        .footer .company-service ul li:hover {
+          color: #F5674B;
+          font-weight: 560; }
+    .footer .company-service p {
+      margin-top: 6px; }
+  .footer .qr-code-sec .qr-code {
+    width: 118px;
+    height: 118px;
+    background: url(../images/qr-code.jpg) no-repeat 0 0; }
+  .footer .qr-code-sec p {
+    font-size: 14px;
+    color: #3B3B3B;
+    text-align: center;
+    margin-top: 2px; }
+
+body {
+  overflow: hidden; }
+
+.login-banner-sec {
+  height: 622px;
+  z-index: -1;
+  background: url("../images/login-banner.jpg") no-repeat 0 0;
+  background-size: cover; }
+  .login-banner-sec .login-banner {
+    height: 622px; }
+  .login-banner-sec .login-banner-wrap {
+    position: relative;
+    height: 622px;
+    width: 1160px; }
+    .login-banner-sec .login-banner-wrap ul {
+      position: absolute;
+      text-align: left;
+      right: 16px;
+      top: 236px; }
+      .login-banner-sec .login-banner-wrap ul li {
+        visibility: hidden;
+        height: 54px;
+        line-height: 54px;
+        color: #FF2C02;
+        font-size: 14px;
+        text-indent: 18px;
+        background: url("../images/wrong-remind.png") no-repeat 0 21px; }
+  .login-banner-sec .login-ad {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    top: 211px;
+    left: 10px; }
+  .login-banner-sec .login-box {
+    width: 472px;
+    height: 330px;
+    padding: 0 24px 0;
+    position: absolute;
+    right: 100px;
+    top: 146px;
+    border-radius: 2px;
+    background-color: #fff; }
+    .login-banner-sec .login-box .login-box-header {
+      height: 90px;
+      line-height: 90px;
+      font-size: 30px;
+      color: #3b3b3b;
+      width: 100%; }
+      .login-banner-sec .login-box .login-box-header h2 {
+        float: left; }
+      .login-banner-sec .login-box .login-box-header .log-remind-msg {
+        display: block;
+        font-size: 16px;
+        color: #F5674B;
+        float: right; }
+    .login-banner-sec .login-box form {
+      border: 1px solid #E4E4E4;
+      border-radius: 2px;
+      width: 472px;
+      height: 109px; }
+      .login-banner-sec .login-box form input {
+        width: 452px;
+        display: block;
+        height: 20px;
+        padding: 17px 10px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #3b3b3b; }
+      .login-banner-sec .login-box form .login-inp-username {
+        border-bottom: 1px solid #E4E4E4; }
+    .login-banner-sec .login-box .about-password {
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+      color: #464646; }
+      .login-banner-sec .login-box .about-password input {
+        width: 16px;
+        height: 16px;
+        display: block;
+        float: left;
+        margin-top: 7px; }
+      .login-banner-sec .login-box .about-password p {
+        margin-left: 4px;
+        line-height: 30px;
+        float: left; }
+      .login-banner-sec .login-box .about-password em {
+        float: right; }
+    .login-banner-sec .login-box .login-button {
+      width: 472px;
+      height: 48px;
+      margin-top: 24px;
+      line-height: 48px;
+      font-size: 24px;
+      text-align: center;
+      font-weight: 600;
+      border-radius: 4px;
+      color: #fff;
+      background-color: #F5674B; }

@@ -1,0 +1,19 @@
+.fr {
+  float: right; }
+
+.fl {
+  float: left; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+.mediate {
+  margin: 0 auto; }
+
+.min-main-width {
+  min-width: 1160px; }
+
+.placeholder {
+  color: #aaa; }

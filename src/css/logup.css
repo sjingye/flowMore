@@ -1,0 +1,275 @@
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #F3F3F3; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img,
+fieldset,
+img {
+  border: 0 none; }
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal; }
+
+strong {
+  font-weight: 800; }
+
+ol,
+ul,
+li {
+  list-style: none outside none; }
+
+caption,
+th {
+  text-align: left; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+a {
+  text-decoration: none; }
+
+input {
+  border: none; }
+
+.fr {
+  float: right; }
+
+.fl {
+  float: left; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+.mediate {
+  margin: 0 auto; }
+
+.min-main-width {
+  min-width: 1160px; }
+
+.placeholder {
+  color: #aaa; }
+
+.fr {
+  float: right; }
+
+.fl {
+  float: left; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+.mediate {
+  margin: 0 auto; }
+
+.min-main-width {
+  min-width: 1160px; }
+
+.placeholder {
+  color: #aaa; }
+
+.common-header {
+  min-width: 1160px;
+  box-sizing: border-box;
+  padding: 0 40px;
+  height: 94px;
+  background-color: #F3F3F3;
+  box-shadow: 0 0  6px 6px #909090; }
+  .common-header .common-logo {
+    display: block;
+    width: 294px;
+    height: 85px;
+    margin-top: 4px;
+    background: url("../images/logo-other.png") no-repeat 0 0; }
+  .common-header .guide {
+    display: block;
+    width: 134px;
+    height: 24px;
+    margin-top: 35px;
+    font-size: 16px;
+    color: #3B3B3B;
+    background: url("../images/guide-arrow.png") no-repeat 116px 2px; }
+
+.footer {
+  margin: 0px auto 0;
+  height: 210px;
+  width: 100%;
+  background-color: #EDEDED; }
+  .footer .footer-wrap {
+    box-sizing: border-box;
+    width: 1160px;
+    height: 210px;
+    padding: 44px 50px 24px;
+    color: #3B3B3B; }
+  .footer .custom-service {
+    width: 65px;
+    height: 64px;
+    background: url(../images/custom-service.png) no-repeat 0 0; }
+  .footer .service-time {
+    width: 256px;
+    height: 132px;
+    margin: 0px 0 0 24px;
+    border-right: 1px solid #B4B4B4; }
+    .footer .service-time h2 {
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 1.2em;
+      margin-top: 10px; }
+    .footer .service-time p {
+      font-size: 14px; }
+  .footer .company-service {
+    width: 570px;
+    height: 132px;
+    padding-left: 24px; }
+    .footer .company-service ul {
+      margin-bottom: 10px;
+      overflow: hidden; }
+      .footer .company-service ul li {
+        font-size: 16px;
+        color: #3B3B3B;
+        margin-right: 40px;
+        float: left; }
+        .footer .company-service ul li:hover {
+          color: #F5674B;
+          font-weight: 560; }
+    .footer .company-service p {
+      margin-top: 6px; }
+  .footer .qr-code-sec .qr-code {
+    width: 118px;
+    height: 118px;
+    background: url(../images/qr-code.jpg) no-repeat 0 0; }
+  .footer .qr-code-sec p {
+    font-size: 14px;
+    color: #3B3B3B;
+    text-align: center;
+    margin-top: 2px; }
+
+.wrap {
+  width: 580px;
+  height: 450px;
+  margin: 84px auto; }
+  .wrap .login-box-header {
+    height: 60px;
+    margin-bottom: 8px; }
+    .wrap .login-box-header h2 {
+      font-size: 40px;
+      height: 60px;
+      line-height: 60px;
+      color: #3b3b3b; }
+    .wrap .login-box-header .log-remind-msg {
+      font-size: 14px;
+      margin-top: 24px;
+      color: #F5674B; }
+  .wrap .logup-box {
+    background-color: #fff;
+    width: 580px;
+    height: 284px;
+    position: relative; }
+    .wrap .logup-box .form-group {
+      height: 56px;
+      width: 580px;
+      border-bottom: 1px solid #E4E4E4;
+      position: relative; }
+      .wrap .logup-box .form-group .form-control {
+        width: 580px;
+        text-indent: 10px;
+        height: 20px;
+        padding: 18px 0;
+        line-height: 20px;
+        font-size: 14px; }
+        .wrap .logup-box .form-group .form-control:focus {
+          border-bottom: 1px solid #006dcc; }
+      .wrap .logup-box .form-group .form-button {
+        width: 94px;
+        height: 40px;
+        border: 1px solid #E4E4E4;
+        border-radius: 6px;
+        background-color: transparent;
+        position: absolute;
+        top: 8px;
+        right: 10px; }
+    .wrap .logup-box .last {
+      border: none; }
+    .wrap .logup-box .about-logup {
+      font-size: 14px;
+      color: #464646;
+      margin-top: 14px;
+      overflow: hidden; }
+      .wrap .logup-box .about-logup .checkbox {
+        width: 16px;
+        height: 16px;
+        float: left; }
+      .wrap .logup-box .about-logup p {
+        float: left;
+        margin-left: 4px; }
+        .wrap .logup-box .about-logup p a {
+          color: #F5674B; }
+    .wrap .logup-box .logup-button {
+      width: 572px;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      font-size: 24px;
+      margin-top: 20px;
+      color: #fff;
+      background-color: #F5674B;
+      border-radius: 4px; }
+    .wrap .logup-box ul {
+      position: absolute;
+      height: 284px;
+      right: -140px;
+      top: 0; }
+      .wrap .logup-box ul li {
+        display: none;
+        height: 56px;
+        line-height: 56px;
+        font-size: 14px;
+        color: #F5674B;
+        text-indent: 18px;
+        background: url("../images/wrong-remind.png") no-repeat 0 21px; }

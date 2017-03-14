@@ -1,0 +1,64 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personalCenterCommon.scss";
+
+.personal-information{
+    ul{
+          width: 846px;
+          margin:0 auto;
+          li{
+               width: 846px;
+               height: 176px;
+               margin-top: 40px;
+               background-color: #EDEDED;
+               .icon{
+                    width: 68px;
+                    height: 68px;
+                    border-radius: 50%;
+                    background-color: #FFFFFF;
+                    float: left;
+                    margin: 54px 0 0 40px;
+               }
+               .icon-phone{
+                    background: url("../images/icon-phone.png") #FFFFFF center center no-repeat ;
+               }
+               .icon-password{
+                    background: url("../images/icon-password.png") #FFFFFF center center no-repeat;
+               }
+               .information{
+                    float: left;
+                    width: 520px;
+                    margin: 52px 0 0 16px;
+                    p{
+                         font-size: 18px;
+                         line-height: 28px;
+                    }
+               }
+               em{
+                    display: block;
+                    float: right;
+                    width:138px;
+                    height: 40px;
+                    float:right;
+                    margin: 68px 40px 0 0;
+                    font-size: 20px;
+                    font-weight:600;
+                    line-height: 40px;
+                    text-align: center;
+                    background-color: $mainColor;
+                    color: #fff;
+               }
+          }
+    } 
+}
+
+.personal-information-inner{
+    .modify-phon-number{
+        z-index: 4;
+    }
+}
+
