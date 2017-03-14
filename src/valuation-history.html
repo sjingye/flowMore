@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
     <script src="./lib/jquery.min.js"></script>
-    <link rel="stylesheet" href="./css/valuationHistory.css">
-	<title>valuationHistory</title>
+    <link rel="stylesheet" href="./css/valuation-history.css">
+	<title>valuation-history</title>
 </head>
 <body>
     @@include('./include/personalCenterHeader.html')
@@ -15,10 +15,10 @@
 		<div class="personal-center-left-menu">
             <ul>
                 <li>
-                    <a href="./personalCenter.html" >个人信息</a>
+                    <a href="./personal-center.html" >个人信息</a>
                 </li>
                 <li>
-                    <a href="./valuationHistory.html" class="active">估值历史</a>
+                    <a href="./valuation-history.html" class="active">估值历史</a>
                 </li>
             </ul>
         </div>
@@ -101,22 +101,18 @@
                     </tr>
                 </tbody>
             </table>
-            <ul class="pages-show">
-                <li class="active">首页</li>
-                <li>上一页</li>
-                <li class="pages">
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                    </ul>
-                </li>
-                <li>下一页</li>
-                <li>尾页</li>
-            </ul>
+            <p class="paginate-container">
+                <a class="active">首页</a>
+                <a>上一页</a>
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a>下一页</a>
+                <a>尾页</a>
+            </p>
         </div>
 	</div>
 @@include('./include/footer.html')
-<!--<script src="./js/valuationHistory.js"></script>-->
+<!--<script src="./js/valuation-history.js"></script>-->
 </body>
 </html>

@@ -4,7 +4,7 @@
 @import "./reset.scss";
 @import "./global.scss";
 @import "./common.scss";
-@import "./personalCenterCommon.scss";
+@import "./personal-center-common.scss";
 
 .personal-information{
     ul{
@@ -38,7 +38,7 @@
                          line-height: 28px;
                     }
                }
-               em{
+               a{
                     display: block;
                     float: right;
                     width:138px;
@@ -58,7 +58,6 @@
 }
 
 .fixInfomation{
-     display: none;
      .modify-details{
           margin: 0px auto 0;
           h3{

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <script src="./lib/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/personal-center.css">
+	<title>personalCenter</title>
+</head>
+<body>
+	@@include('./include/personalCenterHeader.html')
+	<div class="wrap mediate">
+		@@include('./include/personalCenterLeftMenu.html')
+        <div class="modif-login-password rightMenu fixInfomation">
+            <div class="menu-header">
+                <h3>修改登录密码</h3>
+                <p>Modify Login Password</p>
+            </div>
+            <div class="modify-details">
+                <h3>修改登录密码</h3>
+                <div class="modify-details-wrap">
+                    <form>
+                        <p>
+                            <label for="">原密码:</label>
+                            <input type="text" name="" class="old-code focus">
+                        </p>
+                        <p>
+                            <label for="">新密码:</label>
+                            <input type="text" name="" class="new-code">
+                        </p>
+                        <p>
+                            <label for="">新密码确认:</label>
+                            <input type="text" name="" class="new-code-qy">
+                        </p>
+                    </form>
+                    <div class="button">
+                        <a href="">提交</a>
+                        <a href="">返回</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modif-login-password -->
+	</div>  
+    <!--end wrap-->
+	@@include('./include/footer.html')
+    <script src="./js/personalCenter.js"></script>
+</body>
+</html>

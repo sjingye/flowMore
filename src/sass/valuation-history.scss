@@ -4,7 +4,7 @@
 @import "./reset.scss";
 @import "./global.scss";
 @import "./common.scss";
-@import "./personalCenterCommon.scss";
+@import "./personal-center-common.scss";
 
 .valuation-history{
      table{
@@ -51,6 +51,8 @@
           height: 28px;
           line-height: 28px;
           text-align: center;
+
+      //     此处
           >li{
                float: left;
                border: 1px solid #aaa;
@@ -58,6 +60,7 @@
                margin: 0 6px;
                &.active,
                &:hover{
+                    border: none;
                     color: #fff;
                     background-color: $mainColor;
                }
@@ -84,6 +87,7 @@
                          }
                     }
                }
+               //     此处
           }
      }
 }

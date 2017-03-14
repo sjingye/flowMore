@@ -299,63 +299,102 @@ input {
       margin-left: 16px;
       float: left; }
 
-.valuation-history table {
-  width: 920px;
-  margin: 26px auto 22px;
-  text-align: center; }
-  .valuation-history table thead {
-    text-align: center;
+.personal-information ul {
+  width: 846px;
+  margin: 0 auto; }
+  .personal-information ul li {
+    width: 846px;
+    height: 176px;
+    margin-top: 40px;
     background-color: #EDEDED; }
-    .valuation-history table thead th {
-      text-align: center;
-      height: 50px;
-      line-height: 50px;
+    .personal-information ul li .icon {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      float: left;
+      margin: 54px 0 0 40px; }
+    .personal-information ul li .icon-phone {
+      background: url("../images/icon-phone.png") #FFFFFF center center no-repeat; }
+    .personal-information ul li .icon-password {
+      background: url("../images/icon-password.png") #FFFFFF center center no-repeat; }
+    .personal-information ul li .information {
+      float: left;
+      width: 520px;
+      margin: 52px 0 0 16px; }
+      .personal-information ul li .information p {
+        font-size: 18px;
+        line-height: 28px; }
+    .personal-information ul li a {
+      display: block;
+      float: right;
+      width: 138px;
+      height: 40px;
+      float: right;
+      margin: 68px 40px 0 0;
       font-size: 20px;
-      color: #333;
-      font-weight: bold; }
-  .valuation-history table tbody tr {
-    height: 48px; }
-    .valuation-history table tbody tr.even {
-      background-color: #FFF3F3; }
-    .valuation-history table tbody tr.odd {
-      background-color: #FFF; }
-    .valuation-history table tbody tr td {
-      font-size: 14px;
-      line-height: 48px;
+      font-weight: 600;
+      line-height: 40px;
       text-align: center;
-      color: #333; }
-      .valuation-history table tbody tr td a {
-        color: #F5674B; }
-
-.valuation-history .pages-show {
-  position: absolute;
-  bottom: 20px;
-  left: 300px;
-  height: 28px;
-  line-height: 28px;
-  text-align: center; }
-  .valuation-history .pages-show > li {
-    float: left;
-    border: 1px solid #aaa;
-    padding: 0px 6px;
-    margin: 0 6px; }
-    .valuation-history .pages-show > li.active, .valuation-history .pages-show > li:hover {
+      background-color: #F5674B;
       color: #fff;
-      background-color: #F5674B; }
-    .valuation-history .pages-show > li ul {
-      overflow: hidden;
-      margin-right: -12px; }
-      .valuation-history .pages-show > li ul li {
+      border-radius: 4px; }
+
+.fixInfomation .modify-details {
+  margin: 0px auto 0; }
+  .fixInfomation .modify-details h3 {
+    margin: 30px auto 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3b3b3b;
+    text-align: center; }
+  .fixInfomation .modify-details .modify-details-wrap {
+    padding: 40px 0px 0;
+    width: 660px;
+    height: 400px;
+    margin: 0 auto 0;
+    position: relative;
+    background-color: #EDEDED; }
+    .fixInfomation .modify-details .modify-details-wrap form {
+      width: 430px;
+      margin: 0 auto 0; }
+      .fixInfomation .modify-details .modify-details-wrap form p {
+        overflow: hidden;
+        margin-bottom: 30px; }
+        .fixInfomation .modify-details .modify-details-wrap form p label, .fixInfomation .modify-details .modify-details-wrap form p input {
+          float: left;
+          color: #3b3b3b; }
+        .fixInfomation .modify-details .modify-details-wrap form p label {
+          font-size: 14px;
+          width: 74px;
+          height: 40px;
+          line-height: 40px;
+          text-align: right;
+          margin-right: 8px; }
+        .fixInfomation .modify-details .modify-details-wrap form p input {
+          width: 330px;
+          height: 16px;
+          line-height: 16px;
+          padding: 12px 8px;
+          font-size: 16px;
+          border-radius: 4px; }
+          .fixInfomation .modify-details .modify-details-wrap form p input :focus,
+          .fixInfomation .modify-details .modify-details-wrap form p input .focus {
+            border: 1px solid #F5674B; }
+    .fixInfomation .modify-details .modify-details-wrap .button {
+      position: absolute;
+      bottom: 76px;
+      left: 154px;
+      width: 428px;
+      height: 40px; }
+      .fixInfomation .modify-details .modify-details-wrap .button a {
+        display: block;
+        width: 138px;
+        height: 40px;
+        margin-right: 76px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        background-color: #F5674B;
         float: left;
-        padding: 0 6px;
-        border: 1px solid #aaa; }
-    .valuation-history .pages-show > li.pages {
-      border: none; }
-      .valuation-history .pages-show > li.pages:hover {
-        color: #3b3b3b;
-        background-color: #fff; }
-      .valuation-history .pages-show > li.pages li {
-        margin-right: 12px; }
-        .valuation-history .pages-show > li.pages li:hover {
-          color: #fff;
-          background-color: #F5674B; }
+        border-radius: 4px; }
