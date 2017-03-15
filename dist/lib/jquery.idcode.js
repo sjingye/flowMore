@@ -18,7 +18,7 @@
 			e	 		: 'idcode',
 			codeType 	: { name : 'follow', len: 4},
 			codeTip		: '',
-			inputID		: ''
+			inputID		: 'Txtidcode'
 		};
 	
 	var _set = {
@@ -74,14 +74,14 @@
 		if(!settings.inputID){
 			 var language = $("#language").val();
 			 if (language == "en") {
-				 htmlCode='<span><input id="ehong-code-input" class ="logup-inp-phone-code logup-inp-1 form-control" name="ehong-code-input" type="text" placeholder="vertificationCode" maxlength="4" onchange="checkidcode();" /></span>';
+				 htmlCode='<input id="ehong-code-input" class ="logup-inp-phone-code logup-inp-1 form-control" name="ehong-code-input" type="text" placeholder="vertificationCode" maxlength="4" onchange="checkidcode();" />';
 			   } else {
-				 htmlCode='<span><input id="ehong-code-input" class ="logup-inp-phone-code logup-inp-1 form-control" name="ehong-code-input" type="text" placeholder="请输入验证码" maxlength="4" onchange="checkidcode();" /></span>';
+				 htmlCode='<input id="ehong-code-input" class ="logup-inp-phone-code logup-inp-1 form-control" name="ehong-code-input" type="text" placeholder="请输入验证码" maxlength="4" onchange="checkidcode();" />';
 			   }
 		}
 		htmlCode+='<div id="ehong-code" class="form-button" style="font-size:35px"';
 		htmlCode+=String(randNum);
-		htmlCode+='" href="#" onblur="return false" onfocus="return false" oncontextmenu="return false" onclick="$.idcode.setCode()">' + _setStyle(codeObj) + '</div>' + '<span id="ehong-code-tip-ck" class="ehong-code-val-tip" onclick="$.idcode.setCode()">'+ settings.codeTip +'</span>';
+		htmlCode+='" href="#" onblur="return false" onfocus="return false" oncontextmenu="return false" onclick="$.idcode.setCode()">' + _setStyle(codeObj) + '</div>';
 		$(eid).html(htmlCode);
 		_storeData(_set.storeLable, codeObj);		
 	}

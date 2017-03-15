@@ -66,11 +66,13 @@ $loginButton.click(function (event) {
         $.ajax({
             type: "POST",
             url: "userLogin.java",
-            dataType: 'text',
+            dataType: 'string',
             data: $('.login-box form').serialize(),
             success: function success(data) {
                 if (data == 1) {
                     // location.href = "index.jsp";
+                    $.cookie('userId', $loginInp.eq(0).val(), { expires: 7, path: '/' });
+                    $.cookie('password', $loginInp.eq(1).val(), { expires: 7, path: '/' });
                     return true;
                 } else {
                     alert("登入失败，用户名或密码错误！");

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="./css/personal-center.css">
+	<title>personal-center-fix-phone</title>
+</head>
+<body>
+	@@include('./include/personalCenterHeader.html')
+	<div class="wrap mediate">
+		@@include('./include/personalCenterLeftMenu.html')
+        <div class="modify-phone-number rightMenu fixInfomation">
+            <div class="menu-header">
+                <h3>修改手机号</h3>
+                <p>Modify Phone Number</p>
+            </div>
+            <div class="modify-details">
+                <h3>修改手机号码</h3>
+                <div class="modify-details-wrap">
+                    <form action="#">
+                        <p>
+                            <label for="">原手机号:</label>
+                            <input type="text" name="" class="old-phone gn" placeholder="请输入原手机号">
+                        </p>
+                        <p>
+                            <label for="">验证码:</label>
+                            <input type="text" name="" class="verification-code-old" placeholder="请输入原手机号获取的验证码">
+                            <input type="button" value="手机验证码">
+                        </p>
+                        <p>
+                            <label for="">新手机号:</label>
+                            <input type="text" name="" class="new-phone" placeholder="请输入新手机号">
+                        </p>
+                        <p>
+                            <label for="">验证码:</label>
+                            <input type="text" name="" class="verification-code-new" placeholder="请输入新手机号获取的验证码">
+                            <input type="button"  value="手机验证码">
+                        </p>
+                    </form>
+                    <ul class="remind">
+                        <li id="old-phone-remind"></li>
+                        <li id="verification-code-old-remind"></li>
+                        <li id="new-phone-remind"></li>
+                        <li id="verification-code-new-remind"></li>
+                    </ul>
+                    <input type="button" value="提交" class="submit-button">
+                </div>
+                <!-- end  modify-details-wrap -->
+            </div>
+        </div>
+        <!-- end modify-phone-number -->
+	</div>  
+    <!--end wrap-->
+	@@include('./include/footer.html')
+    <script src="./js/personal-center-fix-phone.js"></script>
+</body>
+</html>

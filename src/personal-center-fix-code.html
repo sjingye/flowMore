@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="./css/personal-center.css">
+	<title>personalCenter</title>
+</head>
+<body>
+	@@include('./include/personalCenterHeader.html')
+	<div class="wrap mediate">
+		@@include('./include/personalCenterLeftMenu.html')
+        <div class="modif-login-password rightMenu fixInfomation">
+            <div class="menu-header">
+                <h3>修改登录密码</h3>
+                <p>Modify Login Password</p>
+            </div>
+            <div class="modify-details">
+                <h3>修改登录密码</h3>
+                <div class="modify-details-wrap">
+                    <form>
+                        <p>
+                            <label for="">原密码:</label>
+                            <input type="text" name="" class="old-code" placeholder="请输入原密码">
+                        </p>
+                        <p>
+                            <label for="">新密码:</label>
+                            <input type="text" name="" class="new-code " placeholder="长度为4到16个字符，支持大小写字母、数字和标点符号，不允许有空格">
+                        </p>
+                        <p>
+                            <label for="">新密码确认:</label>
+                            <input type="text" name="" class="new-code-qy" placeholder="请输入与上面密码相同的密码">
+                        </p>
+                    </form>
+                    <ul class="remind">
+                        <li id="old-code-remind"></li>
+                        <li id="new-code-remind"></li>
+                        <li id="new-code-qy-remind"></li>
+                    </ul>
+                    <input type="button" value="提交" class="submit-button code-submit-button">
+                </div>
+            </div>
+        </div>
+        <!-- end modif-login-password -->
+	</div>  
+    <!--end wrap-->
+	@@include('./include/footer.html')
+    <script src="./js/personal-center-fix-code.js"></script>
+</body>
+</html>
