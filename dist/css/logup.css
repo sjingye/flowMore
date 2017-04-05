@@ -26,7 +26,7 @@ td {
 body {
   background: #F3F3F3;
   min-width: 1160px;
-  font: 14px/1.5  Microsoft YaHei,tahoma,arial,Hiragino Sans GB,sans-serif;
+  font: 14px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, sans-serif;
   color: #3b3b3b; }
 
 table {
@@ -77,6 +77,9 @@ a {
 input {
   border: none; }
 
+html {
+  min-width: 1160px; }
+
 .fr {
   float: right; }
 
@@ -96,6 +99,9 @@ input {
 
 .placeholder {
   color: #aaa; }
+
+html {
+  min-width: 1160px; }
 
 .fr {
   float: right; }
@@ -122,22 +128,34 @@ input {
   box-sizing: border-box;
   padding: 0 40px;
   height: 94px;
-  background-color: #F3F3F3;
-  box-shadow: 0 0  4px 2px #909090; }
+  background-color: #fff;
+  box-shadow: 0 0 4px 2px #909090; }
   .common-header .common-logo {
     display: block;
     width: 294px;
     height: 85px;
-    margin-top: 4px;
-    background: url("../images/logo-other.png") no-repeat 0 0; }
+    margin-top: 4px; }
+    .common-header .common-logo.cn {
+      background: url("../images/logo-other.png") no-repeat 0 0; }
+    .common-header .common-logo.en {
+      background: url("../images/logo-other-en.png") no-repeat 0 0; }
   .common-header .guide {
-    display: block;
-    width: 134px;
     height: 24px;
+    overflow: hidden;
+    text-align: right;
     margin-top: 35px;
-    font-size: 16px;
-    color: #3B3B3B;
-    background: url("../images/guide-arrow.png") no-repeat 116px 2px; }
+    font-size: 16px; }
+    .common-header .guide a {
+      color: #3B3B3B;
+      display: block;
+      float: right; }
+    .common-header .guide a:hover {
+      color: #F5674B;
+      text-decoration: underline; }
+    .common-header .guide .arrow {
+      width: 20px;
+      height: 20px;
+      background: url("../images/guide-arrow.png") no-repeat 0px 2px; }
 
 .footer {
   margin: 0px auto 0;
@@ -147,7 +165,7 @@ input {
   .footer .footer-wrap {
     box-sizing: border-box;
     width: 1160px;
-    height: 210px;
+    height: 230px;
     padding: 44px 50px 24px;
     color: #3B3B3B; }
   .footer .custom-service {
@@ -156,14 +174,15 @@ input {
     background: url(../images/custom-service.png) no-repeat 0 0; }
   .footer .service-time {
     width: 256px;
-    height: 132px;
+    height: 152px;
     margin: 0px 0 0 24px;
     border-right: 1px solid #B4B4B4; }
     .footer .service-time h2 {
-      font-size: 30px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 1.2em;
-      margin-top: 10px; }
+      margin-top: 10px;
+      color: #3b3b3b; }
     .footer .service-time p {
       font-size: 14px; }
   .footer .company-service {
@@ -171,18 +190,24 @@ input {
     height: 132px;
     padding-left: 24px; }
     .footer .company-service ul {
-      margin-bottom: 10px;
+      margin-bottom: 30px;
       overflow: hidden; }
       .footer .company-service ul li {
         font-size: 16px;
         color: #3B3B3B;
         margin-right: 40px;
-        float: left; }
+        float: left;
+        cursor: pointer; }
         .footer .company-service ul li:hover {
           color: #F5674B;
           font-weight: 560; }
     .footer .company-service p {
       margin-top: 6px; }
+    .footer .company-service a {
+      color: #3b3b3b; }
+    .footer .company-service a:hover {
+      color: #F5674B;
+      text-decoration: underline; }
   .footer .qr-code-sec .qr-code {
     width: 118px;
     height: 118px;
@@ -193,6 +218,9 @@ input {
     text-align: center;
     margin-top: 2px; }
 
+.common-header {
+  background: #f3f3f3; }
+
 .wrap {
   width: 580px;
   height: 450px;
@@ -201,7 +229,7 @@ input {
     height: 60px;
     margin-bottom: 8px; }
     .wrap .login-box-header h2 {
-      font-size: 40px;
+      font-size: 24px;
       height: 60px;
       line-height: 60px;
       color: #3b3b3b; }
@@ -209,11 +237,16 @@ input {
       font-size: 14px;
       margin-top: 24px;
       color: #F5674B; }
+      .wrap .login-box-header .log-remind-msg:hover {
+        text-decoration: underline; }
   .wrap .logup-box {
-    background-color: #fff;
     width: 580px;
-    height: 284px;
     position: relative; }
+    .wrap .logup-box form {
+      background-color: #fff;
+      width: 580px;
+      position: relative;
+      border: 1px solid #e5e5e5; }
     .wrap .logup-box .form-group {
       height: 56px;
       width: 580px;
@@ -222,9 +255,8 @@ input {
       .wrap .logup-box .form-group .form-control {
         width: 580px;
         text-indent: 16px;
-        height: 20px;
-        padding: 18px 0;
-        line-height: 20px;
+        height: 56px;
+        line-height: 56px;
         font-size: 14px; }
         .wrap .logup-box .form-group .form-control:focus {
           border-bottom: 1px solid #006dcc; }
@@ -247,14 +279,15 @@ input {
       .wrap .logup-box .about-logup .checkbox {
         width: 16px;
         height: 16px;
-        float: left; }
+        float: left;
+        cursor: pointer; }
       .wrap .logup-box .about-logup p {
         float: left;
         margin-left: 4px; }
         .wrap .logup-box .about-logup p a {
           color: #F5674B; }
     .wrap .logup-box .logup-button {
-      width: 572px;
+      width: 580px;
       height: 48px;
       line-height: 48px;
       text-align: center;
@@ -262,7 +295,8 @@ input {
       margin-top: 20px;
       color: #fff;
       background-color: #F5674B;
-      border-radius: 4px; }
+      border-radius: 4px;
+      cursor: pointer; }
     .wrap .logup-box ul {
       position: absolute;
       height: 284px;
@@ -287,13 +321,18 @@ input {
         .wrap .logup-box ul li.right {
           visibility: visible;
           background: url("../images/right-remind.png") no-repeat 0 21px; }
-      .wrap .logup-box ul .wrong#remind-3 {
+      .wrap .logup-box ul #logup-inp-code-remind.wrong {
         line-height: 56px;
         background: url("../images/wrong-remind.png") no-repeat 0 21px; }
-      .wrap .logup-box ul .focus#remind-3 {
+      .wrap .logup-box ul #logup-inp-code-remind.focus {
         line-height: 28px;
         text-indent: 0;
         background: url(""); }
+
+.find-password-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
 
 .mask {
   display: none;
@@ -332,17 +371,18 @@ input {
     color: #333;
     position: absolute;
     top: 16px;
-    right: 52px;
+    right: 22px;
     font-size: 20px;
     font-weight: normal;
-    padding: 2px 8px;
+    padding: 0px 8px;
     background-color: #ccc; }
   .popup-box .item {
     clear: both;
-    width: 560px;
-    min-height: 400px;
-    overflow: auto;
+    width: 660px;
+    box-sizing: border-box;
     padding: 10px;
+    max-height: 500px;
+    overflow: auto;
     margin: 0px auto;
     text-align: left; }
   .popup-box p {

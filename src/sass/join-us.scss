@@ -1,0 +1,99 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personal-center-common.scss";
+body {
+    background-color: #fff;
+}
+
+.join-us {
+    overflow: hidden;
+    .section {
+        margin: 20px auto 30px;
+        h3 {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    }
+    .enterprise-information {
+        overflow: hidden;
+        img {
+            float: left;
+            width: 248px;
+            height: 226px;
+            margin: 0 20px;
+        }
+        .enterprise-information-container {
+            float: left;
+            width: 620px;
+            p {
+                text-indent: 2em;
+                margin-bottom: 8px;
+            }
+            h2 {
+                color: #F4694D;
+                font-size: 20px;
+                font-weight: bold;
+                margin: 30px 0 0 26px;
+            }
+        }
+    }
+    .recruiting {
+        .recruiting-item {
+            margin-left: 30px;
+            .recruiting-item-header {
+                color: #3b3b3b;
+                font-size: 16px;
+                font-weight: bold;
+                text-indent: 20px;
+                width: 886px;
+                height: 60px;
+                line-height: 60px;
+                margin-bottom: 20px;
+                cursor: pointer;
+                background: url(../images/unwind.png) 850px 22px no-repeat #ededed;
+            }
+            .job-description,
+            .job-requirements {
+                margin-bottom: 34px;
+                h4 {
+                    font-weight: bold;
+                    margin: 10px 0 14px 20px;
+                }
+                ul {
+                    margin-left: 60px;
+                    li {
+                        margin: 6px 0;
+                    }
+                }
+            }
+            // 切换recruiting-item的样式即可以控制recruiting-item-container的显示状态
+            &.active {
+                .recruiting-item-container {
+                    display: block;
+                }
+                .recruiting-item-header {
+                    color: #fff;
+                    font-weight: bold;
+                    background: url(../images/fold.png) 850px 22px no-repeat #F5694D;
+                }
+            }
+            .recruiting-item-container {
+                display: none;
+            }
+        }
+    }
+    .contact-methods {
+        p {
+            margin: 10px 0 0 30px;
+            span {
+                color: $mainColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,135 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personal-center-common.scss";
+body {
+    background-color: #fff;
+    .personal-center-header {
+        background-color: #fff;
+    }
+}
+
+.top-banner {
+    height: 216px;
+    background: url(../images/service-organization-banner.jpg) center 0 no-repeat;
+}
+
+.top-guide {
+    height: 52px;
+    border-bottom: 1px solid #dfdfdf;
+    ul {
+        width: 1160px;
+        height: 48px;
+        margin: 0 auto;
+        li {
+            padding: 0 20px;
+            height: 34px;
+            margin: 14px 50px 0 0;
+            float: left;
+            text-align: center;
+            color: #464646;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            &.active {
+                border-bottom: 4px solid $mainColor;
+            }
+        }
+    }
+}
+
+.wrap {
+    ul {
+        width: 1160px;
+        margin: 0px auto 0px;
+        display: none;
+        overflow: hidden;
+        &.active {
+            display: block;
+        }
+        li {
+            float: left;
+            width: 272px;
+            height: 360px;
+            border: 1px solid #dfdfdf;
+            margin: 12px 8px;
+            position: relative;
+            img {
+                max-width: 272px;
+                height: 110px;
+                margin: 10px auto 0;
+                display: block;
+            }
+            h2 {
+                font-weight: bold;
+                color: #F4674B;
+                font-size: 16px;
+                text-align: center;
+                width: 100%;
+                height: 24px;
+                position: absolute;
+                top: 140px;
+                left: 0;
+            }
+            p {
+                color: $mainFontColor;
+                font-size: 14px;
+                width: 100%;
+                margin-top: 10px;
+                margin-left: 8px;
+                overflow: hidden;
+                span,
+                em,
+                a {
+                    float: left;
+                    display: block;
+                }
+                em,
+                a {
+                    max-width: 190px;
+                }
+                em {
+                    height: 64px;
+                }
+                a {
+                    color: $mainFontColor;
+                    text-decoration: underline;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .first {
+                margin-top: 60px;
+                em {
+                    height: 46px;
+                }
+            }
+        }
+    }
+    .lf {
+        li {
+            height: 280px;
+            .first {
+                height: 30px;
+            }
+        }
+    }
+    .af {
+        li {
+            height: 300px;
+            h2 {
+                width: 200px;
+                height: 48px;
+                left: 36px;
+            }
+            .first {
+                margin-top: 80px;
+                height: 30px;
+            }
+        }
+    }
+}

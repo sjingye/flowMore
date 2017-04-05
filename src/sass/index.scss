@@ -4,72 +4,63 @@
 @import "./reset.scss";
 @import "./global.scss";
 @import "./common.scss";
+@import "./personal-center-common.scss";
+.personal-center-header {
+    background: transparent;
+    color: #fff;
+    box-shadow: none;
+}
+
+.nav {
+    .logo {
+        color: #fff;
+        &.cn {
+            background: url(../images/logo.png) 0 0 no-repeat;
+        }
+        &.en {
+            background: url(../images/logo-en.png) 0 0 no-repeat;
+        }
+    }
+    .apply {
+        color: #fff;
+        .user {
+            color: #fff;
+            background-color: transparent;
+            p {
+                span {
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+            a {
+                color: #fff;
+            }
+            .logout {
+                color: #fff;
+            }
+        }
+    }
+}
+
 .header {
     width: 100%;
     height: 642px;
     overflow: hidden;
+    position: relative;
     .banner {
         z-index: -1;
-        max-width: 100%;
         height: 642px;
+        margin: auto;
         position: absolute;
         top: 0;
-        left: 0;
-    }
-    .nav {
-        width: $mainWidth;
-        height: 94px;
-        overflow: hidden;
-        .logo {
-            width: 294px;
-            height: 85px;
-            margin-top: 8px;
-        }
-        .apply {
-            .language {
-                height: 60px;
-                width: 150px;
-                div {
-                    float: right;
-                    font-size: 14px;
-                    color: #FEFEFE;
-                    width: 50px;
-                    text-align: right;
-                    height: 60px;
-                    line-height: 60px;
-                    margin-left: 24px;
-                }
-            }
-            .log {
-                width: 161px;
-                height: 34px;
-                text-align: center;
-                line-height: 34px;
-                background-color: #fff;
-                font-size: 14px;
-                a {
-                    display: block;
-                    float: left;
-                    width: 80px;
-                    height: 34px;
-                    color: $mainFontColor;
-                    border-right: 1px solid #909090;
-                    &:hover,
-                    &.active {
-                        background-color: $mainColor;
-                        color: #fff;
-                    }
-                    &.last{
-                        border-right: none;
-                    }
-                }
-            }
-        }
+        bottom: 0;
     }
     .slogan {
         margin: 84px auto 0;
+        width: 1160px;
         img {
             display: block;
+            margin: 0px auto;
         }
         .slogan-big {
             width: 850px;
@@ -81,7 +72,7 @@
     }
     .feed-in {
         width: 700px;
-        margin: 70px auto 0;
+        margin: 50px auto 0;
         form {
             height: 60px;
             input {
@@ -89,15 +80,15 @@
                 line-height: 60px;
             }
             .inp {
-                width: 484px;
+                width: 524px;
                 height: 60px;
                 font-size: 16px;
                 color: #3b3b3b;
-                line-height: 20px;
-                padding: 0 20px;
+                line-height: 60px;
                 text-indent: 10px;
             }
-            .inp-button {
+            a {
+                display: inline-block;
                 width: 176px;
                 height: 60px;
                 line-height: 60px;
@@ -111,12 +102,13 @@
             display: none;
             width: 524px;
             height: 90px;
-            background: #f5f5f5;
-            li{
+            li {
                 height: 30px;
                 line-height: 30px;
-                color: #3b3b3b;
+                color: #131313;
                 text-indent: 16px;
+                cursor: pointer;
+                background: rgba(255, 255, 255, .5);
             }
         }
     }
@@ -186,8 +178,12 @@
                 padding: 18px;
                 background: #fff;
                 position: relative;
+                transition: all .5s;
                 &.last {
                     margin-right: 0px;
+                }
+                &:hover {
+                    box-shadow: 2px 6px 6px #c0bbbb;
                 }
                 h3 {
                     color: $mainColor;

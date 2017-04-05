@@ -2,79 +2,128 @@
 @charset "utf-8";
 // 引入外部文件
 //个人中心与估值历史头部通用部分
-.personal-center-header{
+$mainWidth: 1160px;
+$mainColor: #F5674B;
+$mainFontColor: #3b3b3b;
+.personal-center-header {
     width: 100%;
     height: 94px;
     background-color: #fff;
     color: #464646;
     box-shadow: 0 0 4px 2px #909090;
-    .nav{
-        width: 1160px;
-        height: 94px;
-        overflow: hidden;
-        .logo {
-            width: 294px;
-            height: 85px;
-            margin-top: 4px;
-            float: left;
+}
+
+.nav {
+    width: 1160px;
+    height: 94px;
+    overflow: hidden;
+    .logo {
+        width: 294px;
+        height: 85px;
+        margin-top: 4px;
+        float: left;
+        display: inline-block;
+        cursor: pointer;
+        &.cn {
+            background: url(../images/logo-other.png) 0 0 no-repeat;
         }
-        .apply {
+        &.en {
+            background: url(../images/logo-other-en.png) 0 0 no-repeat;
+        }
+    }
+    .apply {
+        float: right;
+        height: 94px;
+        width: 300px;
+        color: #3b3b3b;
+        .language {
+            height: 40px;
+            width: 280px;
             float: right;
-            height: 94px;
-            width: 300px;
-            color: #3b3b3b;
-            .language {
-                height: 60px;
-                width:280px;
+            div {
                 float: right;
-                div {
-                    float: right;
-                    font-size: 14px;
-                    width: 60px;
-                    text-align: right;
-                    height: 60px;
-                    line-height: 60px;
-                    margin-left: 24px;
+                font-size: 14px;
+                width: 60px;
+                text-align: right;
+                height: 40px;
+                line-height: 40px;
+                margin-left: 24px;
+                cursor: pointer;
+            }
+        }
+        .user-log {
+            float: right;
+            height: 34px;
+            div {
+                display: none;
+                &.active {
+                    display: block;
                 }
             }
-            .user {
-                float: right;
-                width: 300px;
+        }
+        .log {
+            width: 300px;
+            height: 34px;
+            text-align: center;
+            line-height: 34px;
+            font-size: 14px;
+            a {
+                display: block;
+                float: left;
+                width: 80px;
                 height: 34px;
-                line-height: 34px;
+                color: #3b3b3b;
                 background-color: #fff;
-                font-size: 14px;
-                p{
-                    float: right;
-                    span{
-                        color:#F5674B;
-                        font-weight: bold;
-                    }
+                float: right;
+                &:hover,
+                &.active {
+                    background-color: $mainColor;
+                    color: #fff;
                 }
-                a {
-                    float: right;
-                    display: block;
-                    text-align: right;
-                    width: 50px;
-                    height: 34px;
-                    margin-left: 22px;
-                    color: #333;
-                    &:hover{
-                        color: #F5674B;
-                    }
+            }
+        }
+        .user {
+            float: right;
+            width: 300px;
+            height: 34px;
+            line-height: 34px;
+            font-size: 14px;
+            .user-name {
+                float: right;
+                span {
+                    color: #F5674B;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+            .logout {
+                float: right;
+                display: block;
+                text-align: right;
+                width: 50px;
+                height: 34px;
+                margin-left: 22px;
+                color: #3b3b3b;
+                cursor: pointer;
+                &:hover {
+                    color: #F5674B;
                 }
             }
         }
     }
 }
-.personal-center-left-menu{
+
+.personal-center-left-menu {
     float: left;
-    ul{
-        background-color: #EDEDED;
+    width: 200px;
+    padding-bottom: 4000px;
+    margin-bottom: -4000px;
+    background-color: #EDEDED;
+    ul {
         width: 200px;
         height: 540px;
-        li{
-            a{
+        li {
+            a {
                 display: block;
                 width: 200px;
                 height: 58px;
@@ -83,41 +132,43 @@
                 text-align: center;
                 color: #3b3b3b;
                 font-weight: bold;
-                &.active{
-                background-color: #fff;
-                border-left: 4px #F5674B solid;
-                color: #F4674B;
+                &.active {
+                    background-color: #fff;
+                    border-left: 4px #F5674B solid;
+                    color: #F4674B;
                 }
             }
         }
     }
 }
-.wrap{
+
+.wrap {
     width: 1160px;
-    margin-top:30px;
+    margin-top: 30px;
     overflow: hidden;
     position: relative;
     margin-bottom: 40px;
 }
-.rightMenu{
+
+.rightMenu {
     color: #3B3B3B;
+    box-sizing: border-box;
     width: 960px;
-    height: 540px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    padding: 20px 20px 4000px 20px;
+    margin-bottom: -4000px;
+    box-sizing: border-box;
+    float: left;
     background-color: #FFFFFF;
-    .menu-header{
-        margin:0  20px;
+    .menu-header {
         height: 58px;
         line-height: 58px;
         border-bottom: 2px solid #F5674B;
-        h3{
+        h3 {
             font-size: 24px;
             font-weight: bold;
             float: left;
         }
-        p{
+        p {
             font-size: 16px;
             line-height: 24px;
             margin-top: 20px;

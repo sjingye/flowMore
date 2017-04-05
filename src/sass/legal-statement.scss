@@ -1,0 +1,36 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personal-center-common.scss";
+body {
+    background-color: #fff;
+}
+
+.legal-statement {
+    .section {
+        margin: 20px auto 30px;
+        h3 {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    }
+    .disclaimer {
+        p {
+            text-indent: 2em;
+            line-height: 1.8em;
+            margin-bottom: 10px;
+        }
+        ul {
+            li {
+                text-indent: 2em;
+                line-height: 1.8em;
+                margin-bottom: 4px;
+            }
+        }
+    }
+}

@@ -26,7 +26,7 @@ td {
 body {
   background: #F3F3F3;
   min-width: 1160px;
-  font: 14px/1.5  Microsoft YaHei,tahoma,arial,Hiragino Sans GB,sans-serif;
+  font: 14px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, sans-serif;
   color: #3b3b3b; }
 
 table {
@@ -77,6 +77,9 @@ a {
 input {
   border: none; }
 
+html {
+  min-width: 1160px; }
+
 .fr {
   float: right; }
 
@@ -96,6 +99,9 @@ input {
 
 .placeholder {
   color: #aaa; }
+
+html {
+  min-width: 1160px; }
 
 .fr {
   float: right; }
@@ -122,22 +128,34 @@ input {
   box-sizing: border-box;
   padding: 0 40px;
   height: 94px;
-  background-color: #F3F3F3;
-  box-shadow: 0 0  4px 2px #909090; }
+  background-color: #fff;
+  box-shadow: 0 0 4px 2px #909090; }
   .common-header .common-logo {
     display: block;
     width: 294px;
     height: 85px;
-    margin-top: 4px;
-    background: url("../images/logo-other.png") no-repeat 0 0; }
+    margin-top: 4px; }
+    .common-header .common-logo.cn {
+      background: url("../images/logo-other.png") no-repeat 0 0; }
+    .common-header .common-logo.en {
+      background: url("../images/logo-other-en.png") no-repeat 0 0; }
   .common-header .guide {
-    display: block;
-    width: 134px;
     height: 24px;
+    overflow: hidden;
+    text-align: right;
     margin-top: 35px;
-    font-size: 16px;
-    color: #3B3B3B;
-    background: url("../images/guide-arrow.png") no-repeat 116px 2px; }
+    font-size: 16px; }
+    .common-header .guide a {
+      color: #3B3B3B;
+      display: block;
+      float: right; }
+    .common-header .guide a:hover {
+      color: #F5674B;
+      text-decoration: underline; }
+    .common-header .guide .arrow {
+      width: 20px;
+      height: 20px;
+      background: url("../images/guide-arrow.png") no-repeat 0px 2px; }
 
 .footer {
   margin: 0px auto 0;
@@ -147,7 +165,7 @@ input {
   .footer .footer-wrap {
     box-sizing: border-box;
     width: 1160px;
-    height: 210px;
+    height: 230px;
     padding: 44px 50px 24px;
     color: #3B3B3B; }
   .footer .custom-service {
@@ -156,14 +174,15 @@ input {
     background: url(../images/custom-service.png) no-repeat 0 0; }
   .footer .service-time {
     width: 256px;
-    height: 132px;
+    height: 152px;
     margin: 0px 0 0 24px;
     border-right: 1px solid #B4B4B4; }
     .footer .service-time h2 {
-      font-size: 30px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 1.2em;
-      margin-top: 10px; }
+      margin-top: 10px;
+      color: #3b3b3b; }
     .footer .service-time p {
       font-size: 14px; }
   .footer .company-service {
@@ -171,18 +190,24 @@ input {
     height: 132px;
     padding-left: 24px; }
     .footer .company-service ul {
-      margin-bottom: 10px;
+      margin-bottom: 30px;
       overflow: hidden; }
       .footer .company-service ul li {
         font-size: 16px;
         color: #3B3B3B;
         margin-right: 40px;
-        float: left; }
+        float: left;
+        cursor: pointer; }
         .footer .company-service ul li:hover {
           color: #F5674B;
           font-weight: 560; }
     .footer .company-service p {
       margin-top: 6px; }
+    .footer .company-service a {
+      color: #3b3b3b; }
+    .footer .company-service a:hover {
+      color: #F5674B;
+      text-decoration: underline; }
   .footer .qr-code-sec .qr-code {
     width: 118px;
     height: 118px;
@@ -193,60 +218,191 @@ input {
     text-align: center;
     margin-top: 2px; }
 
-.header {
+.personal-center-header {
   width: 100%;
-  height: 642px;
+  height: 94px;
+  background-color: #fff;
+  color: #464646;
+  box-shadow: 0 0 4px 2px #909090; }
+
+.nav {
+  width: 1160px;
+  height: 94px;
   overflow: hidden; }
-  .header .banner {
-    z-index: -1;
-    max-width: 100%;
-    height: 642px;
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .header .nav {
-    width: 1160px;
+  .nav .logo {
+    width: 294px;
+    height: 85px;
+    margin-top: 4px;
+    float: left;
+    display: inline-block;
+    cursor: pointer; }
+    .nav .logo.cn {
+      background: url(../images/logo-other.png) 0 0 no-repeat; }
+    .nav .logo.en {
+      background: url(../images/logo-other-en.png) 0 0 no-repeat; }
+  .nav .apply {
+    float: right;
     height: 94px;
-    overflow: hidden; }
-    .header .nav .logo {
-      width: 294px;
-      height: 85px;
-      margin-top: 8px; }
-    .header .nav .apply .language {
-      height: 60px;
-      width: 150px; }
-      .header .nav .apply .language div {
+    width: 300px;
+    color: #3b3b3b; }
+    .nav .apply .language {
+      height: 40px;
+      width: 280px;
+      float: right; }
+      .nav .apply .language div {
         float: right;
         font-size: 14px;
-        color: #FEFEFE;
-        width: 50px;
+        width: 60px;
         text-align: right;
-        height: 60px;
-        line-height: 60px;
-        margin-left: 24px; }
-    .header .nav .apply .log {
-      width: 161px;
+        height: 40px;
+        line-height: 40px;
+        margin-left: 24px;
+        cursor: pointer; }
+    .nav .apply .user-log {
+      float: right;
+      height: 34px; }
+      .nav .apply .user-log div {
+        display: none; }
+        .nav .apply .user-log div.active {
+          display: block; }
+    .nav .apply .log {
+      width: 300px;
       height: 34px;
       text-align: center;
       line-height: 34px;
-      background-color: #fff;
       font-size: 14px; }
-      .header .nav .apply .log a {
+      .nav .apply .log a {
         display: block;
         float: left;
         width: 80px;
         height: 34px;
         color: #3b3b3b;
-        border-right: 1px solid #909090; }
-        .header .nav .apply .log a:hover, .header .nav .apply .log a.active {
+        background-color: #fff;
+        float: right; }
+        .nav .apply .log a:hover, .nav .apply .log a.active {
           background-color: #F5674B;
           color: #fff; }
-        .header .nav .apply .log a.last {
-          border-right: none; }
+    .nav .apply .user {
+      float: right;
+      width: 300px;
+      height: 34px;
+      line-height: 34px;
+      font-size: 14px; }
+      .nav .apply .user .user-name {
+        float: right; }
+        .nav .apply .user .user-name span {
+          color: #F5674B;
+          font-weight: bold;
+          cursor: pointer; }
+      .nav .apply .user .logout {
+        float: right;
+        display: block;
+        text-align: right;
+        width: 50px;
+        height: 34px;
+        margin-left: 22px;
+        color: #3b3b3b;
+        cursor: pointer; }
+        .nav .apply .user .logout:hover {
+          color: #F5674B; }
+
+.personal-center-left-menu {
+  float: left;
+  width: 200px;
+  padding-bottom: 4000px;
+  margin-bottom: -4000px;
+  background-color: #EDEDED; }
+  .personal-center-left-menu ul {
+    width: 200px;
+    height: 540px; }
+    .personal-center-left-menu ul li a {
+      display: block;
+      width: 200px;
+      height: 58px;
+      line-height: 58px;
+      font-size: 18px;
+      text-align: center;
+      color: #3b3b3b;
+      font-weight: bold; }
+      .personal-center-left-menu ul li a.active {
+        background-color: #fff;
+        border-left: 4px #F5674B solid;
+        color: #F4674B; }
+
+.wrap {
+  width: 1160px;
+  margin-top: 30px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 40px; }
+
+.rightMenu {
+  color: #3B3B3B;
+  box-sizing: border-box;
+  width: 960px;
+  padding: 20px 20px 4000px 20px;
+  margin-bottom: -4000px;
+  box-sizing: border-box;
+  float: left;
+  background-color: #FFFFFF; }
+  .rightMenu .menu-header {
+    height: 58px;
+    line-height: 58px;
+    border-bottom: 2px solid #F5674B; }
+    .rightMenu .menu-header h3 {
+      font-size: 24px;
+      font-weight: bold;
+      float: left; }
+    .rightMenu .menu-header p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 20px;
+      margin-left: 16px;
+      float: left; }
+
+.personal-center-header {
+  background: transparent;
+  color: #fff;
+  box-shadow: none; }
+
+.nav .logo {
+  color: #fff; }
+  .nav .logo.cn {
+    background: url(../images/logo.png) 0 0 no-repeat; }
+  .nav .logo.en {
+    background: url(../images/logo-en.png) 0 0 no-repeat; }
+
+.nav .apply {
+  color: #fff; }
+  .nav .apply .user {
+    color: #fff;
+    background-color: transparent; }
+    .nav .apply .user p span {
+      color: #fff;
+      font-weight: bold; }
+    .nav .apply .user a {
+      color: #fff; }
+    .nav .apply .user .logout {
+      color: #fff; }
+
+.header {
+  width: 100%;
+  height: 642px;
+  overflow: hidden;
+  position: relative; }
+  .header .banner {
+    z-index: -1;
+    height: 642px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0; }
   .header .slogan {
-    margin: 84px auto 0; }
+    margin: 84px auto 0;
+    width: 1160px; }
     .header .slogan img {
-      display: block; }
+      display: block;
+      margin: 0px auto; }
     .header .slogan .slogan-big {
       width: 850px; }
     .header .slogan .slogan-little {
@@ -254,21 +410,21 @@ input {
       margin: 16px auto 0; }
   .header .feed-in {
     width: 700px;
-    margin: 70px auto 0; }
+    margin: 50px auto 0; }
     .header .feed-in form {
       height: 60px; }
       .header .feed-in form input {
         float: left;
         line-height: 60px; }
       .header .feed-in form .inp {
-        width: 484px;
+        width: 524px;
         height: 60px;
         font-size: 16px;
         color: #3b3b3b;
-        line-height: 20px;
-        padding: 0 20px;
+        line-height: 60px;
         text-indent: 10px; }
-      .header .feed-in form .inp-button {
+      .header .feed-in form a {
+        display: inline-block;
         width: 176px;
         height: 60px;
         line-height: 60px;
@@ -279,13 +435,14 @@ input {
     .header .feed-in ul {
       display: none;
       width: 524px;
-      height: 90px;
-      background: #f5f5f5; }
+      height: 90px; }
       .header .feed-in ul li {
         height: 30px;
         line-height: 30px;
-        color: #3b3b3b;
-        text-indent: 16px; }
+        color: #131313;
+        text-indent: 16px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.5); }
 
 .wrap {
   width: 1160px; }
@@ -342,9 +499,12 @@ input {
         margin-left: 10px;
         padding: 18px;
         background: #fff;
-        position: relative; }
+        position: relative;
+        transition: all .5s; }
         .wrap .main ul li.last {
           margin-right: 0px; }
+        .wrap .main ul li:hover {
+          box-shadow: 2px 6px 6px #c0bbbb; }
         .wrap .main ul li h3 {
           color: #F5674B;
           font-size: 18px;

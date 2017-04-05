@@ -1,0 +1,158 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personal-center-common.scss";
+body {
+    background: #fff;
+    .personal-center-header {
+        background: #fff;
+    }
+}
+
+.wrap {
+    width: 1160px;
+    .sidebar {
+        width: 360px;
+        float: right;
+        margin-left: 16px;
+        border: 1px solid #dfdfdf;
+        h2 {
+            height: 54px;
+            line-height: 54px;
+            text-align: center;
+            font-weight: bold;
+            color: #464646;
+            font-size: 16px;
+            background: url(../images/hot.png) -4px -4px no-repeat;
+        }
+        ul {
+            width: 340px;
+            margin: 0 10px;
+            li {
+                height: 132px;
+                border-top: 1px solid #dfdfdf;
+                a {
+                    display: block;
+                    width: 340px;
+                    height: 132px;
+                }
+                img {
+                    width: 148px;
+                    height: 104px;
+                    float: left;
+                    margin-top: 14px;
+                }
+                div {
+                    float: left;
+                    width: 178px;
+                    margin: 14px 0 0 14px;
+                    h3 {
+                        color: rgb(60, 60, 60);
+                        font-size: 16px;
+                        line-height: 1.4em;
+                        font-weight: bold;
+                        max-height: 46px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        &:hover {
+                            color: $mainColor;
+                        }
+                    }
+                    p {
+                        color: $mainFontColor;
+                        font-size: 14px;
+                        line-height: 1.4em;
+                        max-height: 60px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        float: left;
+        box-sizing: border-box;
+        position: relative;
+        width: 780px;
+        padding: 0 10px;
+        border: 1px solid #dfdfdf;
+        .item-header {
+            border-bottom: 1px solid #dfdfdf;
+            h2 {
+                font-size: 16px;
+                font-weight: bold;
+                color: $mainFontColor;
+                text-align: center;
+                margin: 44px auto 38px;
+            }
+            div {
+                height: 34px;
+                line-height: 34px;
+                p {
+                    float: left;
+                    font-size: 14px;
+                    color: #777;
+                    margin-left: 20px;
+                    span {
+                        color: $mainFontColor;
+                    }
+                    em {
+                        color: #777;
+                        text-indent: 12px;
+                    }
+                }
+                ul {
+                    float: right;
+                    width: 150px;
+                    height: 26px;
+                    margin-right: 6px;
+                    li {
+                        width: 26px;
+                        height: 26px;
+                        float: left;
+                        margin-right: 10px;
+                        a {
+                            display: block;
+                            width: 26px;
+                            height: 26px;
+                        }
+                    }
+                    .share-add {
+                        background: url(../images/share-add.png) 0 0 no-repeat;
+                    }
+                    .wechat {
+                        background: url(../images/wechat.png) 0 0 no-repeat;
+                    }
+                    .sina {
+                        background: url(../images/sina.png) 0 0 no-repeat;
+                    }
+                    .tencent {
+                        background: url(../images/tencent.png) 0 0 no-repeat;
+                    }
+                }
+            }
+        }
+        .content {
+            padding: 24px 20px 70px;
+            border-bottom: 1px solid #dfdfdf;
+            p {
+                text-indent: 2em;
+                line-height: 1.8em;
+            }
+        }
+        .item-footer {
+            margin: 16px 20px;
+            a {
+                color: $mainFontColor;
+            }
+            a:hover {
+                color: $mainColor;
+                text-decoration: underline;
+            }
+        }
+    }
+}

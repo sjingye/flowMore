@@ -1,0 +1,112 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personal-center-common.scss";
+body {
+    background-color: #fff;
+}
+
+.question-feedback {
+    p {
+        text-indent: 2em;
+        line-height: 1.8em;
+    }
+    .section {
+        margin: 20px auto 30px;
+        h3 {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 12px;
+            text-align: center;
+        }
+        div {
+            width: 740px;
+            height: 460px;
+            padding-top: 40px;
+            margin: 18px auto 0;
+            background: #e9e9e9;
+            box-sizing: border-box;
+            position: relative;
+            p {
+                width: 740px;
+                height: 40px;
+                margin-bottom: 30px;
+            }
+            label {
+                text-align: right;
+                width: 160px;
+                height: 40px;
+                line-height: 40px;
+                float: left;
+            }
+            input,
+            textarea {
+                float: left;
+                margin-left: 10px;
+                border-radius: 4px;
+                text-indent: 8px;
+            }
+            input {
+                width: 450px;
+                height: 40px;
+                line-height: 40px;
+            }
+            textarea {
+                float: left;
+                margin-left: 10px;
+                width: 450px;
+                height: 114px;
+                line-height: 20px;
+                resize: none;
+                color: $mainFontColor;
+            }
+            .submit {
+                width: 240px;
+                height: 40px;
+                text-align: center;
+                margin: 26px 250px 26px 250px;
+                background: $mainColor;
+                color: #fff;
+            }
+            .customer-remind {
+                width: 300px;
+                height: 280px;
+                position: absolute;
+                top: 40px;
+                right: -200px;
+                li {
+                    width: 300px;
+                    height: 40px;
+                    line-height: 40px;
+                    margin-bottom: 30px;
+                    color: $mainColor;
+                    visibility: hidden;
+                    &.wrong {
+                        background: url(../images/wrong-remind.png) 0 13px no-repeat;
+                        text-indent: 20px;
+                        visibility: visible;
+                    }
+                    &.right {
+                        background: url(../images/right-remind.png) 0 13px no-repeat;
+                        text-indent: 20px;
+                        visibility: visible;
+                    }
+                    &.focus {
+                        background: url() no-repeat;
+                        text-indent: 0px;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}

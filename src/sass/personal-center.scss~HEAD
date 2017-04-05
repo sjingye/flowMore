@@ -1,0 +1,196 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personal-center-common.scss";
+
+.personal-information{
+    ul{
+          width: 846px;
+          margin:0 auto;
+          li{
+               width: 846px;
+               height: 176px;
+               margin-top: 40px;
+               background-color: #EDEDED;
+               .icon{
+                    width: 68px;
+                    height: 68px;
+                    border-radius: 50%;
+                    background-color: #FFFFFF;
+                    float: left;
+                    margin: 54px 0 0 40px;
+               }
+               .icon-phone{
+                    background: url("../images/icon-phone.png") #FFFFFF center center no-repeat ;
+               }
+               .icon-password{
+                    background: url("../images/icon-password.png") #FFFFFF center center no-repeat;
+               }
+               .information{
+                    float: left;
+                    width: 520px;
+                    margin: 52px 0 0 16px;
+                    p{
+                         font-size: 18px;
+                         line-height: 28px;
+                    }
+               }
+               a{
+                    display: block;
+                    float: right;
+                    width:138px;
+                    height: 40px;
+                    float:right;
+                    margin: 68px 40px 0 0;
+                    font-size: 20px;
+                    font-weight:600;
+                    line-height: 40px;
+                    text-align: center;
+                    background-color: $mainColor;
+                    color: #fff;
+                    border-radius: 4px;
+               }
+          }
+    } 
+}
+
+.fixInfomation{
+     .modify-details{
+          margin: 0px auto 0;
+          h3{
+               margin: 30px auto 20px;
+               font-size: 20px;
+               font-weight: bold;
+               color: $mainFontColor;
+               text-align: center;
+          }
+          .modify-details-wrap{
+               padding: 40px 0px 0;
+               width: 660px;
+               height: 400px;
+               margin: 0 auto 0;
+               position: relative;
+               background-color: #EDEDED;
+               position: relative;
+               form{
+                    width: 430px;
+                    margin: 0 auto 0;
+                    overflow: hidden;
+                    p{
+                         overflow: hidden;
+                         position: relative;
+                         margin-bottom: 30px;
+                         label,input[type="text"]{
+                              float: left;
+                              color: $mainFontColor;
+                         }
+                         label{
+                              font-size: 14px;
+                              width: 74px;
+                              height: 46px;
+                              line-height: 46px;
+                              text-align: right;
+                              margin-right: 8px;
+                         }
+                         input[type="text"]{
+                             width: 330px; 
+                             height: 22px;
+                             line-height: 22px;
+                             padding: 12px 8px;
+                             font-size: 14px;
+                             border-radius: 4px;
+                             :focus,
+                             .focus{
+                              border: 1px solid $mainColor;
+                             }
+                         }
+                         input[type="button"]{
+                             width: 94px;
+                             height: 30px;
+                             border: 1px solid #ccc;
+                             border-radius: 6px;
+                             background-color: transparent;
+                             position: absolute;
+                             top: 8px;
+                             right: 16px;
+                         }
+                    }
+               }
+               .remind{
+                    position: absolute;
+                    top: 40px;
+                    right: 20px;
+                    width: 80px;
+                    li{
+                         width: 200px;
+                         height: 46px;
+                         line-height: 46px;
+                         margin-bottom: 30px;
+                         font-size: 14px;
+                         color: #F5674B;
+                         visibility: hidden;
+                         
+                         &.focus{
+                              visibility: visible;
+                              background-image: url();
+
+                         }
+                         &.wrong{
+                              visibility: visible;
+                              background: url(../images/wrong-remind.png) no-repeat 0 16px;
+                              text-indent: 24px;
+                         }
+                         &.right{
+                              visibility: visible;
+                              background: url(../images/right-remind.png) no-repeat 0 16px;
+                              text-indent: 24px;
+                         }
+                    }
+                    #new-code-remind.focus{
+                         line-height: 1.2em;
+                    }
+               }
+               .submit-button{
+                    position: absolute;
+                    display: block;
+                    bottom: 56px;
+                    left:120px;
+                    width: 420px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    color: #fff;
+                    background-color: $mainColor;
+                    border-radius: 4px;
+                    font-size: 20px;  
+               }
+               .code-submit-button{
+                   bottom: 76px; 
+               }
+               /* .button{
+                    position: absolute;
+                    bottom: 56px;
+                    left:154px;
+                    width: 428px;
+                    height: 40px;
+                    input{
+                         display: block;
+                         width: 138px;
+                         height: 40px;
+                         margin-right: 76px;
+                         line-height: 40px;
+                         text-align: center;
+                         color: #fff;
+                         background-color: $mainColor;
+                         float: left;
+                         border-radius: 4px;
+                    }
+               } */
+          }
+     }
+}
+
+

@@ -1,15 +1,19 @@
 "use strict";
 
+$(function () {
+    $('input, textarea').placeholder();
+});
+
 //提示框里的信息
 var message = {
     "old-phone": {
         default: "请输入原手机号",
-        wrong: "手机号不正确",
+        wrong: "手机号格式不正确",
         isRight: "false"
     },
     "verification-code-old": {
         default: "请输入原手机号获取的验证码",
-        wrong: "手机验证码不正确",
+        wrong: "验证码格式不正确",
         isRight: "false"
     },
     "new-phone": {
@@ -19,7 +23,7 @@ var message = {
     },
     "verification-code-new": {
         default: "请输入新手机号获取的验证码",
-        wrong: "密码不相同",
+        wrong: "验证码格式不正确",
         isRight: "false"
     }
 };
@@ -39,17 +43,17 @@ function regValue(classname) {
 
     switch (classname) {
         case "old-phone":
-            flag = !!($.cookie("userId") === val);
+            flag = /^1[34578]\d{9}$/.test(val);
             break;
         case "verification-code-old":
             //校验用户输入的验证码与运营商发给用户的是否一样
-            flag = true;
+            flag = /^\d{4}$/.test(val);
             break;
         case "new-phone":
             flag = /^1[34578]\d{9}$/.test(val);
             break;
         case "verification-code-new":
-            flag = /^[A-Za-z0-9]{4,16}$/.test(val);
+            flag = /^\d{4}$/.test(val);
             break;
     }
 

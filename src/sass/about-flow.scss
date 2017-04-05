@@ -1,0 +1,100 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personal-center-common.scss";
+body {
+    background-color: #fff;
+}
+
+.about-flow {
+    p {
+        text-indent: 2em;
+        line-height: 1.8em;
+    }
+    .section {
+        margin: 20px auto 30px;
+        h3 {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    }
+    .flow-survey {
+        >div {
+            overflow: hidden;
+            img {
+                float: left;
+                width: 260px;
+                height: 242px;
+                margin: 0 30px;
+            }
+            p {
+                float: left;
+                width: 600px;
+                text-indent: 2em;
+                margin-top: 60px;
+            }
+        }
+    }
+    .flow-characters {
+        .item-section {
+            h4 {
+                font-weight: bold;
+                height: 30px;
+                line-height: 30px;
+                margin: 20px 0px 8px 28px;
+                text-indent: 16px;
+                background: #eeeeee;
+            }
+            .item-content {
+                overflow: hidden;
+                margin: 20px 0px 20px 28px;
+                img {
+                    width: 210px;
+                    height: 210px;
+                    float: left;
+                }
+                div {
+                    margin-left: 20px;
+                    float: left;
+                    width: 660px;
+                    p {
+                        text-indent: 2em;
+                    }
+                }
+            }
+        }
+        .networked {
+            margin-top: 26px;
+        }
+        .valuation-method {
+            margin-top: 44px;
+        }
+        .big-data {
+            margin-top: 56px;
+        }
+    }
+    .flow-culture {
+        overflow: hidden;
+        margin-bottom: 60px;
+        div {
+            margin: 8px 0 0px 0px;
+            overflow: hidden;
+            ul {
+                float: left;
+                margin-top: 10px;
+                li {
+                    line-height: 1.8em;
+                    text-indent: 2em;
+                }
+            }
+            img {
+                float: right;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personal-center-common.scss";
+.wrap-header {
+    em.cn {
+        background: url(../images/valuation-stage-senior-bg-cn.png) 0 0 no-repeat;
+    }
+    em.en {
+        background: url(../images/valuation-stage-senior-bg-en.png) 0 0 no-repeat;
+    }
+}

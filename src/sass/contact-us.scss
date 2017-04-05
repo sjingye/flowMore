@@ -1,0 +1,52 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personal-center-common.scss";
+body {
+    background-color: #fff;
+}
+
+.contact-us {
+    p {
+        line-height: 1.8em;
+    }
+    .section {
+        margin: 20px auto 30px;
+        h3 {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    }
+    .customer-service {
+        p {
+            height: 30px;
+            line-height: 30px;
+            em {
+                float: left;
+                display: block;
+                width: 80px;
+                text-align: right;
+            }
+            span {
+                float: left;
+                display: block;
+                margin-left: 10px;
+                text-align: left;
+            }
+            a {
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+#map {
+    width: 920px;
+    height: 360px;
+    margin: 20px 0;
+}

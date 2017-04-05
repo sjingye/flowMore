@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
     <script src="./lib/jquery.min.js"></script>
     <script src="./lib/laypage.js"></script>
-    <script src="./lib/jquery.cookie.js"></script>
     <link rel="stylesheet" href="./css/valuation-history.css">
-	<title>valuation-history</title>
+    <link rel="stylesheet" href="./lib/laypage.css">
+    <title>valuation-history</title>
 </head>
+
 <body>
     <div class="personal-center-header">
-	<div class="nav mediate">
-	    <img src="./images/logo-other.png" alt="logo" class="logo fl">
-	    <div class="apply fr">
-	        <div class="language">
-	            <div class="chinese">English</div>
-	            <div class="english">中文</div>
-	        </div>
-	        <div class="user">
-	            <a href="./logout.html" class="logout">退出</a>
-	            <p class="user-name">
-	            	您好，
-	            	<span>13587962356</span>
-	            </p>
-	            
-	        </div>
-	    </div>
-	</div>
+    <div class="nav mediate">
+        <a href="./index.html" class="logo fl cn"></a>
+        <div class="apply fr">
+            <div class="language">
+                <div class="chinese">English</div>
+                <div class="english">中文</div>
+            </div>
+            <div class="user-log">
+                <div class="user  active">
+                    <a class="logout">退出</a>
+                    <p class="user-name">
+                        您好，
+                        <span>13587962356</span>
+                    </p>
+                </div>
+                <div class="log">
+                    <a href="./logup.html" class="last active">注册</a>
+                    <a href="./login.html">登录</a>
+                </div>
+            </div>
+            <!-- end user-log -->
+        </div>
+    </div>
 </div>
 <!-- end header -->
-	<div class="wrap mediate">
-		<div class="personal-center-left-menu">
-            <ul>
-                <li>
-                    <a href="./personal-center.html" >个人信息</a>
-                </li>
-                <li>
-                    <a href="./valuation-history.html" class="active">估值历史</a>
-                </li>
-            </ul>
-        </div>
-		<div class="valuation-history rightMenu active">
+    <div class="wrap mediate">
+        <div class="personal-center-left-menu">
+	<ul>
+		<li>
+            <a href="./valuation-history.html">估值历史</a>
+        </li>
+        <li>
+            <a href="./personal-center.html" class="active">个人信息</a>
+        </li>
+	</ul>
+</div>
+
+        <div class="valuation-history rightMenu active">
             <div class="menu-header">
                 <h3>估值历史</h3>
                 <p>Valuation History</p>
@@ -58,124 +66,44 @@
                     <th></th>
                 </thead>
                 <tbody class="valuation-tbody">
-                    <tr class="even">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>专业估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href="" class="professional-download">下载报告</a>
-                        </td>
-                    </tr>
-                    <tr class="odd">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>快速估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href="">下载报告</a>
-                        </td>
-                    </tr>
-                    <tr class="even">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>专业估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href=""  class="professional-download">下载报告</a>
-                        </td>
-                    </tr>
-                    <tr class="odd">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>快速估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href="">下载报告</a>
-                        </td>
-                    </tr>
-                    <tr class="even">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>快速估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href="">下载报告</a>
-                        </td>
-                    </tr>
-                    <tr class="odd">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>快速估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href="">下载报告</a>
-                        </td>
-                    </tr>
-                    <tr class="even">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>专业估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href=""  class="professional-download">下载报告</a>
-                        </td>
-                    </tr>
+
                 </tbody>
             </table>
-            <div class="paginate-container">
-                <a>首页</a>
-                <a>上一页</a>
-                <a href="">1</a>
-                <a href="">2</a>
-                <a href="">3</a>
-                <a href="">……</a>
-                <a>下一页</a>
-                <a>尾页</a>
+            <div id="paginate-container">
+                <!-- <a>首页</a>
+                    <a>上一页</a>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">……</a>
+                    <a>下一页</a>
+                    <a>尾页</a> -->
             </div>
         </div>
-	</div>
-<!-- </div> -->
-<div class="footer">
+    </div>
+
+    <!-- </div> -->
+    <div class="footer find-password-footer">
     <div class="footer-wrap mediate">
         <div class="custom-service fl"></div>
         <div class="service-time fl">
-            <h2>86108444-6598 </h2>
-            <p>服务时间：09:00-22:00</p>
+            <h2>+86(10)8444-6598 </h2>
+            <p>服务时间：09:00-1700</p>
         </div>
         <div class="company-service fl">
             <ul>
                 <li>行业资讯 </li>
-                <li>创服机构</li>
+                <li>服务机构</li>
                 <li>合作伙伴</li>
                 <li>关于我们</li>
                 <li>免责条款</li>
             </ul>
-            <p>公司邮箱：email:service@flcccc.com</p>
+            <p>公司邮箱：service@flcccc.com</p>
             <p>联系QQ：29075456</p>
             <p>公司地址：北京市朝阳区亮马桥路甲40号二十一世纪大厦B座309室 </p>
-            <p>版权所属版权所属版权所属</p>
+            <p>©2016心流网
+                <a href="">沪ICP备16039641号</a>
+            </p>
         </div>
         <div class="qr-code-sec fr">
             <div class="qr-code"></div>
@@ -184,6 +112,7 @@
     </div>
 </div>
 <!--end footer-->
-<!--<script src="./js/valuation-history.js"></script>-->
+    <!-- <script src="./js/valuation-history.js"></script> -->
 </body>
+
 </html>

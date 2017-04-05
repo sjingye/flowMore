@@ -26,7 +26,7 @@ td {
 body {
   background: #F3F3F3;
   min-width: 1160px;
-  font: 14px/1.5  Microsoft YaHei,tahoma,arial,Hiragino Sans GB,sans-serif;
+  font: 14px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, sans-serif;
   color: #3b3b3b; }
 
 table {
@@ -77,6 +77,9 @@ a {
 input {
   border: none; }
 
+html {
+  min-width: 1160px; }
+
 .fr {
   float: right; }
 
@@ -96,6 +99,9 @@ input {
 
 .placeholder {
   color: #aaa; }
+
+html {
+  min-width: 1160px; }
 
 .fr {
   float: right; }
@@ -122,22 +128,34 @@ input {
   box-sizing: border-box;
   padding: 0 40px;
   height: 94px;
-  background-color: #F3F3F3;
-  box-shadow: 0 0  4px 2px #909090; }
+  background-color: #fff;
+  box-shadow: 0 0 4px 2px #909090; }
   .common-header .common-logo {
     display: block;
     width: 294px;
     height: 85px;
-    margin-top: 4px;
-    background: url("../images/logo-other.png") no-repeat 0 0; }
+    margin-top: 4px; }
+    .common-header .common-logo.cn {
+      background: url("../images/logo-other.png") no-repeat 0 0; }
+    .common-header .common-logo.en {
+      background: url("../images/logo-other-en.png") no-repeat 0 0; }
   .common-header .guide {
-    display: block;
-    width: 134px;
     height: 24px;
+    overflow: hidden;
+    text-align: right;
     margin-top: 35px;
-    font-size: 16px;
-    color: #3B3B3B;
-    background: url("../images/guide-arrow.png") no-repeat 116px 2px; }
+    font-size: 16px; }
+    .common-header .guide a {
+      color: #3B3B3B;
+      display: block;
+      float: right; }
+    .common-header .guide a:hover {
+      color: #F5674B;
+      text-decoration: underline; }
+    .common-header .guide .arrow {
+      width: 20px;
+      height: 20px;
+      background: url("../images/guide-arrow.png") no-repeat 0px 2px; }
 
 .footer {
   margin: 0px auto 0;
@@ -147,7 +165,7 @@ input {
   .footer .footer-wrap {
     box-sizing: border-box;
     width: 1160px;
-    height: 210px;
+    height: 230px;
     padding: 44px 50px 24px;
     color: #3B3B3B; }
   .footer .custom-service {
@@ -156,14 +174,15 @@ input {
     background: url(../images/custom-service.png) no-repeat 0 0; }
   .footer .service-time {
     width: 256px;
-    height: 132px;
+    height: 152px;
     margin: 0px 0 0 24px;
     border-right: 1px solid #B4B4B4; }
     .footer .service-time h2 {
-      font-size: 30px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 1.2em;
-      margin-top: 10px; }
+      margin-top: 10px;
+      color: #3b3b3b; }
     .footer .service-time p {
       font-size: 14px; }
   .footer .company-service {
@@ -171,18 +190,24 @@ input {
     height: 132px;
     padding-left: 24px; }
     .footer .company-service ul {
-      margin-bottom: 10px;
+      margin-bottom: 30px;
       overflow: hidden; }
       .footer .company-service ul li {
         font-size: 16px;
         color: #3B3B3B;
         margin-right: 40px;
-        float: left; }
+        float: left;
+        cursor: pointer; }
         .footer .company-service ul li:hover {
           color: #F5674B;
           font-weight: 560; }
     .footer .company-service p {
       margin-top: 6px; }
+    .footer .company-service a {
+      color: #3b3b3b; }
+    .footer .company-service a:hover {
+      color: #F5674B;
+      text-decoration: underline; }
   .footer .qr-code-sec .qr-code {
     width: 118px;
     height: 118px;
@@ -199,59 +224,95 @@ input {
   background-color: #fff;
   color: #464646;
   box-shadow: 0 0 4px 2px #909090; }
-  .personal-center-header .nav {
-    width: 1160px;
+
+.nav {
+  width: 1160px;
+  height: 94px;
+  overflow: hidden; }
+  .nav .logo {
+    width: 294px;
+    height: 85px;
+    margin-top: 4px;
+    float: left;
+    display: inline-block;
+    cursor: pointer; }
+    .nav .logo.cn {
+      background: url(../images/logo-other.png) 0 0 no-repeat; }
+    .nav .logo.en {
+      background: url(../images/logo-other-en.png) 0 0 no-repeat; }
+  .nav .apply {
+    float: right;
     height: 94px;
-    overflow: hidden; }
-    .personal-center-header .nav .logo {
-      width: 294px;
-      height: 85px;
-      margin-top: 4px;
-      float: left; }
-    .personal-center-header .nav .apply {
-      float: right;
-      height: 94px;
-      width: 300px;
-      color: #3b3b3b; }
-      .personal-center-header .nav .apply .language {
-        height: 60px;
-        width: 280px;
-        float: right; }
-        .personal-center-header .nav .apply .language div {
-          float: right;
-          font-size: 14px;
-          width: 60px;
-          text-align: right;
-          height: 60px;
-          line-height: 60px;
-          margin-left: 24px; }
-      .personal-center-header .nav .apply .user {
+    width: 300px;
+    color: #3b3b3b; }
+    .nav .apply .language {
+      height: 40px;
+      width: 280px;
+      float: right; }
+      .nav .apply .language div {
         float: right;
-        width: 300px;
+        font-size: 14px;
+        width: 60px;
+        text-align: right;
+        height: 40px;
+        line-height: 40px;
+        margin-left: 24px;
+        cursor: pointer; }
+    .nav .apply .user-log {
+      float: right;
+      height: 34px; }
+      .nav .apply .user-log div {
+        display: none; }
+        .nav .apply .user-log div.active {
+          display: block; }
+    .nav .apply .log {
+      width: 300px;
+      height: 34px;
+      text-align: center;
+      line-height: 34px;
+      font-size: 14px; }
+      .nav .apply .log a {
+        display: block;
+        float: left;
+        width: 80px;
         height: 34px;
-        line-height: 34px;
+        color: #3b3b3b;
         background-color: #fff;
-        font-size: 14px; }
-        .personal-center-header .nav .apply .user p {
-          float: right; }
-          .personal-center-header .nav .apply .user p span {
-            color: #F5674B;
-            font-weight: bold; }
-        .personal-center-header .nav .apply .user a {
-          float: right;
-          display: block;
-          text-align: right;
-          width: 50px;
-          height: 34px;
-          margin-left: 22px;
-          color: #333; }
-          .personal-center-header .nav .apply .user a:hover {
-            color: #F5674B; }
+        float: right; }
+        .nav .apply .log a:hover, .nav .apply .log a.active {
+          background-color: #F5674B;
+          color: #fff; }
+    .nav .apply .user {
+      float: right;
+      width: 300px;
+      height: 34px;
+      line-height: 34px;
+      font-size: 14px; }
+      .nav .apply .user .user-name {
+        float: right; }
+        .nav .apply .user .user-name span {
+          color: #F5674B;
+          font-weight: bold;
+          cursor: pointer; }
+      .nav .apply .user .logout {
+        float: right;
+        display: block;
+        text-align: right;
+        width: 50px;
+        height: 34px;
+        margin-left: 22px;
+        color: #3b3b3b;
+        cursor: pointer; }
+        .nav .apply .user .logout:hover {
+          color: #F5674B; }
 
 .personal-center-left-menu {
-  float: left; }
+  float: left;
+  width: 200px;
+  padding-bottom: 4000px;
+  margin-bottom: -4000px;
+  background-color: #EDEDED; }
   .personal-center-left-menu ul {
-    background-color: #EDEDED;
     width: 200px;
     height: 540px; }
     .personal-center-left-menu ul li a {
@@ -277,14 +338,14 @@ input {
 
 .rightMenu {
   color: #3B3B3B;
+  box-sizing: border-box;
   width: 960px;
-  height: 540px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  padding: 20px 20px 4000px 20px;
+  margin-bottom: -4000px;
+  box-sizing: border-box;
+  float: left;
   background-color: #FFFFFF; }
   .rightMenu .menu-header {
-    margin: 0  20px;
     height: 58px;
     line-height: 58px;
     border-bottom: 2px solid #F5674B; }
@@ -298,6 +359,9 @@ input {
       margin-top: 20px;
       margin-left: 16px;
       float: left; }
+
+.personal-center-header {
+  background-color: #f3f3f3; }
 
 .personal-information ul {
   width: 846px;
@@ -355,51 +419,34 @@ input {
     margin: 0 auto 0;
     position: relative;
     background-color: #EDEDED;
-    position: relative;
-    /* .button{
-                    position: absolute;
-                    bottom: 56px;
-                    left:154px;
-                    width: 428px;
-                    height: 40px;
-                    input{
-                         display: block;
-                         width: 138px;
-                         height: 40px;
-                         margin-right: 76px;
-                         line-height: 40px;
-                         text-align: center;
-                         color: #fff;
-                         background-color: $mainColor;
-                         float: left;
-                         border-radius: 4px;
-                    }
-               } */ }
+    position: relative; }
     .fixInfomation .modify-details .modify-details-wrap form {
-      width: 430px;
+      width: 660px;
       margin: 0 auto 0;
       overflow: hidden; }
       .fixInfomation .modify-details .modify-details-wrap form p {
         overflow: hidden;
         position: relative;
         margin-bottom: 30px; }
-        .fixInfomation .modify-details .modify-details-wrap form p label, .fixInfomation .modify-details .modify-details-wrap form p input[type="text"] {
+        .fixInfomation .modify-details .modify-details-wrap form p label,
+        .fixInfomation .modify-details .modify-details-wrap form p input[type="text"] {
           float: left;
           color: #3b3b3b; }
         .fixInfomation .modify-details .modify-details-wrap form p label {
           font-size: 14px;
-          width: 74px;
+          width: 180px;
           height: 46px;
           line-height: 46px;
           text-align: right;
           margin-right: 8px; }
         .fixInfomation .modify-details .modify-details-wrap form p input[type="text"] {
-          width: 330px;
-          height: 22px;
-          line-height: 22px;
-          padding: 12px 8px;
+          width: 338px;
+          height: 46px;
+          line-height: 46px;
+          text-indent: 8px;
           font-size: 14px;
-          border-radius: 4px; }
+          border-radius: 4px;
+          border: 1px solid #dcdcdc; }
           .fixInfomation .modify-details .modify-details-wrap form p input[type="text"] :focus,
           .fixInfomation .modify-details .modify-details-wrap form p input[type="text"] .focus {
             border: 1px solid #F5674B; }
@@ -411,7 +458,7 @@ input {
           background-color: transparent;
           position: absolute;
           top: 8px;
-          right: 16px; }
+          right: 146px; }
     .fixInfomation .modify-details .modify-details-wrap .remind {
       position: absolute;
       top: 40px;
@@ -441,7 +488,7 @@ input {
     .fixInfomation .modify-details .modify-details-wrap .submit-button {
       position: absolute;
       display: block;
-      bottom: 56px;
+      bottom: 46px;
       left: 120px;
       width: 420px;
       height: 40px;
@@ -450,6 +497,7 @@ input {
       color: #fff;
       background-color: #F5674B;
       border-radius: 4px;
-      font-size: 20px; }
+      font-size: 20px;
+      cursor: pointer; }
     .fixInfomation .modify-details .modify-details-wrap .code-submit-button {
       bottom: 76px; }

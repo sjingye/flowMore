@@ -4,6 +4,10 @@
 $mainWidth: 1160px;
 $mainColor: #F5674B;
 $mainFontColor: #3b3b3b;
+html {
+    min-width: $mainWidth;
+}
+
 .fr {
     float: right;
 }
@@ -22,10 +26,10 @@ $mainFontColor: #3b3b3b;
     margin: 0 auto;
 }
 
-.min-main-width{
+.min-main-width {
     min-width: $mainWidth;
 }
 
-.placeholder{
+.placeholder {
     color: #aaa;
 }

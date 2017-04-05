@@ -1,0 +1,216 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personal-center-common.scss";
+@import "../lib/swiper.min.css";
+body {
+    background: #fff;
+    .personal-center-header {
+        background: #fff;
+    }
+}
+
+//顶部的轮播图
+.swiper-container {
+    width: 1160px;
+    height: 280px;
+    margin: 20px auto 0 !important;
+    img {
+        width: 1160px;
+        height: 280px;
+        display: block;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 30px;
+        height: 30px;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23F5674B'%2F%3E%3C%2Fsvg%3E");
+    }
+    .swiper-pagination-bullet-active {
+        background: $mainColor;
+    }
+    .swiper-pagination {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        bottom: 6px;
+        .swiper-pagination-switch {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background: #fff;
+            // box-shadow: 0px 1px 2px #555 inset;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+        .swiper-active-switch {
+            background: $mainColor;
+        }
+    }
+}
+
+//顶部的导航
+.top-guide {
+    height: 52px;
+    border-bottom: 1px solid #dfdfdf;
+    ul {
+        width: 1160px;
+        height: 48px;
+        margin: 0 auto;
+        li {
+            padding: 0 20px;
+            height: 34px;
+            margin: 14px 50px 0 0;
+            float: left;
+            text-align: center;
+            color: #464646;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            &.active {
+                border-bottom: 4px solid $mainColor;
+            }
+        }
+    }
+}
+
+.wrap {
+    width: 1160px;
+    .sidebar {
+        width: 360px;
+        float: right;
+        margin-left: 16px;
+        border: 1px solid #dfdfdf;
+        h2 {
+            height: 54px;
+            line-height: 54px;
+            text-align: center;
+            font-weight: bold;
+            color: #464646;
+            font-size: 16px;
+            background: url(../images/hot.png) -4px -4px no-repeat;
+        }
+        ul {
+            width: 340px;
+            margin: 0 10px;
+            li {
+                height: 132px;
+                border-top: 1px solid #dfdfdf;
+                a {
+                    display: block;
+                    width: 340px;
+                    height: 132px;
+                }
+                img {
+                    width: 148px;
+                    height: 104px;
+                    float: left;
+                    margin-top: 14px;
+                }
+                div {
+                    float: left;
+                    width: 178px;
+                    margin: 14px 0 0 14px;
+                    h3 {
+                        color: rgb(60, 60, 60);
+                        font-size: 16px;
+                        line-height: 1.4em;
+                        font-weight: bold;
+                        max-height: 46px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        &:hover {
+                            color: $mainColor;
+                        }
+                    }
+                    p {
+                        color: $mainFontColor;
+                        font-size: 14px;
+                        line-height: 1.4em;
+                        max-height: 60px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        // text-indent: 2em;
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        float: left;
+        position: relative;
+        width: 780px;
+        ul {
+            width: 780px;
+            display: none;
+            margin-bottom: 106px;
+            &.active {
+                display: block;
+            }
+            li {
+                margin-bottom: 26px;
+                a {
+                    display: block;
+                    width: 778px;
+                    height: 192px;
+                    position: relative;
+                    border: 1px solid #dfdfdf;
+                    &:hover {
+                        box-shadow: 2px 4px 4px 3px #eee;
+                    }
+                }
+                img {
+                    width: 206px;
+                    height: 145px;
+                    float: left;
+                    margin: 22px 0 0 12px;
+                }
+                div {
+                    float: left;
+                    width: 526px;
+                    margin: 22px 0 0 18px;
+                    h3 {
+                        margin: 14px 0 0;
+                        color: rgb(60, 60, 60);
+                        font-size: 16px;
+                        font-weight: bold;
+                        &:hover {
+                            color: $mainColor;
+                        }
+                    }
+                    .article {
+                        margin: 14px 0 0;
+                        color: $mainFontColor;
+                        font-size: 14px;
+                        line-height: 1.6em;
+                        text-indent: 2em;
+                        height: 68px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .date {
+                        position: absolute;
+                        bottom: 14px;
+                        right: 18px;
+                        color: $mainFontColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#paginate-container {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    width: 780px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+}

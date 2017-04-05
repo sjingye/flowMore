@@ -4,81 +4,91 @@
 @import "reset.scss";
 @import "global.scss";
 @import "common.scss";
-.wrap{
+.common-header {
+    background: #f3f3f3;
+}
+
+.wrap {
     width: 580px;
     height: 450px;
-    margin:84px auto;
-    .login-box-header{
+    margin: 84px auto;
+    .login-box-header {
         height: 60px;
         margin-bottom: 8px;
-        h2{
-            font-size: 40px;
+        h2 {
+            font-size: 24px;
             height: 60px;
-            line-height:60px;
+            line-height: 60px;
             color: $mainFontColor;
         }
-        .log-remind-msg{
+        .log-remind-msg {
             font-size: 14px;
-            margin-top:24px;
-            color:$mainColor;
+            margin-top: 24px;
+            color: $mainColor;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
-    .logup-box{
-        background-color: #fff;
+    .logup-box {
         width: 580px;
-        height: 284px;
         position: relative;
-        .form-group{
+        form {
+            background-color: #fff;
+            width: 580px;
+            position: relative;
+            border: 1px solid #e5e5e5;
+        }
+        .form-group {
             height: 56px;
             width: 580px;
             border-bottom: 1px solid #E4E4E4;
             position: relative;
-            .form-control{
+            .form-control {
                 width: 580px;
                 text-indent: 16px;
-                height: 20px;
-                padding:  18px 0;
-                line-height: 20px;
+                height: 56px;
+                line-height: 56px;
                 font-size: 14px;
-                &:focus{
+                &:focus {
                     border-bottom: 1px solid #006dcc;
                 }
             }
-            .form-button{
+            .form-button {
                 width: 94px;
                 height: 40px;
-
                 border: 1px solid #E4E4E4;
                 border-radius: 6px;
                 background-color: transparent;
                 position: absolute;
-                top:8px;
+                top: 8px;
                 right: 16px;
             }
         }
-        .last{
+        .last {
             border: none;
         }
-        .about-logup{
+        .about-logup {
             font-size: 14px;
             color: #464646;
-            margin-top:14px;
+            margin-top: 14px;
             overflow: hidden;
-            .checkbox{
+            .checkbox {
                 width: 16px;
                 height: 16px;
                 float: left;
+                cursor: pointer;
             }
-            p{
+            p {
                 float: left;
                 margin-left: 4px;
-                a{
+                a {
                     color: $mainColor;
                 }
             }
         }
-        .logup-button{
-            width: 572px;
+        .logup-button {
+            width: 580px;
             height: 48px;
             line-height: 48px;
             text-align: center;
@@ -87,40 +97,41 @@
             color: #fff;
             background-color: $mainColor;
             border-radius: 4px;
+            cursor: pointer;
         }
-        ul{
+        ul {
             position: absolute;
             height: 284px;
             right: -250px;
-            top:0;
-            li{
+            top: 0;
+            li {
                 visibility: hidden;
                 width: 240px;
                 height: 56px;
                 line-height: 56px;
                 font-size: 14px;
-                color:$mainColor;
+                color: $mainColor;
                 text-indent: 24px;
                 background: url("../images/wrong-remind.png") no-repeat 0 21px;
-                &.focus{
+                &.focus {
                     visibility: visible;
                     text-indent: 0px;
                     background-image: url('');
                 }
-                &.wrong{
+                &.wrong {
                     visibility: visible;
                     background: url("../images/wrong-remind.png") no-repeat 0 21px;
                 }
-                &.right{
+                &.right {
                     visibility: visible;
                     background: url("../images/right-remind.png") no-repeat 0 21px;
                 }
             }
-            .wrong#remind-3{
+            #logup-inp-code-remind.wrong {
                 line-height: 56px;
                 background: url("../images/wrong-remind.png") no-repeat 0 21px;
             }
-            .focus#remind-3{
+            #logup-inp-code-remind.focus {
                 line-height: 28px;
                 text-indent: 0;
                 background: url("");
@@ -128,22 +139,30 @@
         }
     }
 }
+
+.find-password-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 //遮罩层
-.mask{
+.mask {
     display: none;
     width: 100%;
     height: 100%;
     background: #000;
     opacity: 0.3;
-    filter:Alpha(opacity=30);
+    filter: Alpha(opacity=30);
     position: fixed;
-    top: 0 ;
+    top: 0;
     left: 0;
     display: none;
-    z-index: 6; 
+    z-index: 6;
 }
+
 //弹出层
-.popup-box{
+.popup-box {
     display: none;
     width: 660px;
     position: fixed;
@@ -156,7 +175,7 @@
     box-shadow: 0 2px 4px #333;
     border-radius: 6px;
     max-height: 80%;
-    h2{
+    h2 {
         clear: both;
         padding: 16px 0;
         margin: 0 auto;
@@ -164,26 +183,27 @@
         font-size: 20px;
         color: #1e1e1e;
     }
-    strong{
+    strong {
         color: #333;
         position: absolute;
         top: 16px;
-        right: 52px;
+        right: 22px;
         font-size: 20px;
         font-weight: normal;
-        padding: 2px 8px;
+        padding: 0px 8px;
         background-color: #ccc;
     }
-    .item{
+    .item {
         clear: both;
-        width: 560px;
-        min-height: 400px;
-        overflow: auto;
+        width: 660px;
+        box-sizing: border-box;
         padding: 10px;
+        max-height: 500px;
+        overflow: auto;
         margin: 0px auto;
         text-align: left;
     }
-    p{
+    p {
         color: #3c3c3c;
         clear: both;
         line-height: 1.6em;
@@ -191,13 +211,13 @@
         text-indent: 2em;
         font-size: 14px;
     }
-    .text-01{
+    .text-01 {
         margin: 5px auto;
     }
-    .text-02{
+    .text-02 {
         font-size: 15px;
     }
-    .ptit{
+    .ptit {
         clear: both;
         line-height: 24px;
         padding: 0;

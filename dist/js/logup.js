@@ -1,95 +1,103 @@
 "use strict";
 
+$(function () {
+    $('input, textarea').placeholder();
+});
+
 //提示框里的信息
-var message = [{
-    default: "请输入中国大陆手机号",
-    wrong: "手机号格式不正确",
-    isRight: "false"
-}, {
-    default: "请输入验证码",
-    wrong: "验证码不正确",
-    isRight: "false"
-}, {
-    default: "",
-    wrong: "手机验证码不正确",
-    isRight: "false"
-}, {
-    default: "长度为4到16个字符，支持大小写字母、数字和标点符号，不允许有空格",
-    wrong: "密码格式不正确",
-    isRight: "false"
-}, {
-    default: "请输入与上次相同的密码",
-    wrong: "密码不相同",
-    isRight: "false"
-}];
+var message = {
+    "logup-inp-phone": {
+        default: "请输入中国大陆手机号",
+        wrong: "手机号格式不正确",
+        isRight: "false"
+    },
+    "logup-inp-identifying-code": {
+        default: "请输入验证码",
+        wrong: "验证码格式不正确",
+        isRight: "false"
+    },
+    "logup-inp-phone-code": {
+        default: "请输入手机验证码",
+        wrong: "手机验证码格式不正确",
+        isRight: "false"
+    },
+    "logup-inp-code": {
+        default: "长度为4到16个字符，支持大小写字母、数字，不允许有空格",
+        wrong: "密码格式不正确",
+        isRight: "false"
+    },
+    "logup-inp-code-qy": {
+        default: "请输入与上次相同的密码",
+        wrong: "两次密码不一致",
+        isRight: "false"
+    }
+};
 
 //dom
 var $logupInp = $(".form-inline .form-group input[type='text']"); //dom：输入框内的input[type='text']
-console.log($logupInp.length);
 var $reminds = $(".logup-box ul li"); //dom：右边的提示框
 var $loginButton = $(".logup-box .logup-button"); //dom：注册按钮
-$(function () {
-    $.idcode.setCode();
-});
+var classnames = ["logup-inp-phone", "logup-inp-identifying-code", "logup-inp-phone-code", "logup-inp-code", "logup-inp-code-qy"];
 
-function checkidcode() {
-    if ($.idcode.validateCode()) {
-        return true;
-    } else {
-        return false;
-    }
-}
 //函数：表单验证、过滤
-function regValue(num) {
-    var $text = $(".logup-inp-" + num);
-    var $remind = $("#remind-" + num);
+function regValue(classname) {
+    var $text = $("." + classname);
+    var $remind = $("#" + classname + "-remind");
     var val = $.trim($text.val());
     var flag = false;
 
-    switch (parseInt(num)) {
-        case 0:
+    switch (classname) {
+        case classnames[0]:
             flag = /^1[34578]\d{9}$/.test(val);
             break;
-        case 1:
-            flag = checkidcode();
-            console.log(flag);
-            break;
-        case 2:
+        case classnames[1]:
+            // flag = checkidcode();
             flag = true;
             break;
-        case 3:
+        case classnames[2]:
+            flag = /^\d{4}$/.test(val);
+            break;
+        case classnames[3]:
             flag = /^[A-Za-z0-9]{4,16}$/.test(val);
             break;
-        case 4:
+        case classnames[4]:
             flag = !!($.trim($logupInp.eq(3).val()) === val);
             break;
     }
 
     if (flag) {
         $remind.removeClass().addClass("right").html("");
-        message[num].isRight = "true";
+        message[classname].isRight = "true";
     } else {
-        $remind.html(message[num].wrong).removeClass().addClass("wrong");
-        message[num].isRight = "false";
+        $remind.html(message[classname].wrong).removeClass().addClass("wrong");
+        message[classname].isRight = "false";
     }
 }
 
 //事件：为所有的输入框添加事件
-
-var _loop = function _loop(i, len) {
-    $logupInp.eq(i).on({
-        focus: function focus() {
-            $reminds.eq(i).removeClass().addClass("focus").html(message[i].default);
-        },
-        blur: function blur() {
-            regValue(i);
+$logupInp.on({
+    focus: function focus() {
+        var allClass = this.className.split(" ");
+        var curClass = classnames[0];
+        for (var i = 0; i < allClass.length; i++) {
+            if (classnames.indexOf(allClass[i]) != -1) {
+                curClass = allClass[i];
+            }
         }
-    });
-};
-
-for (var i = 0, len = $logupInp.length; i < len; i++) {
-    _loop(i, len);
-}
+        var $remind = $("#" + curClass + "-remind");
+        $remind.removeClass().addClass("focus").html(message[curClass].default);
+    },
+    blur: function blur() {
+        var allClass = this.className.split(" ");
+        var curClass = classnames[0];
+        for (var i = 0; i < allClass.length; i++) {
+            if (classnames.indexOf(allClass[i]) > -1) {
+                curClass = allClass[i];
+            }
+        }
+        regValue(curClass);
+    }
+});
 
 //事件：为注册按钮添加事件
 $loginButton.click(function (event) {
@@ -142,11 +150,11 @@ $mask.click(function (event) {
 });
 //事件：点击关闭按钮弹出层关闭
 $closes.click(function () {
-    $(this).parent().hide();
+    $(this).parent().parent().hide();
     $mask.hide();
 });
 
 //弹出窗内部滚动的时候禁止冒泡
-$items.scroll(function (event) {
-    event.stopPropagation();
-});
+/*$items.scroll(function (event) {
+   event.stopPropagation();
+})*/

@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
     <script src="./lib/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/personal-center.css">
-	<title>personal-center</title>
+    <title>personal-center</title>
 </head>
+
 <body>
-	@@include('./include/personalCenterHeader.html')
-	<div class="wrap mediate">
-		@@include('./include/personalCenterLeftMenu.html')
-		<div class="personal-information rightMenu">
-			<div class="menu-header">
-				<h3>个人信息</h3>
-				<p>Personal Information</p>
-			</div>
-			<ul>
-				<li>
-					<div class="icon icon-phone"></div>
-					<div class="information">
-						<p>
-							手机号码：
-							<span>132****8523</span>
-						</p>
-						<p>安全</p>
-						<p>手机可以用于登录账号，重置密码或其它安全验证</p>
-					</div>
-					<a href="./personal-center-fix-phone.html">立即修改</a>
-				</li>
-				<li>
-					<div class="icon icon-password"></div>
-					<div class="information">
-						<p>
-							登录密码：
-							<span>********</span>
-						</p>
-						<p>用于保护账号信息和登录安全</p>
-					</div>
-					<a href="./personal-center-fix-code.html">立即修改</a>
-				</li>
-			</ul>
-		</div>
-	</div>  
+    @@include('./include/personalCenterHeader.html')
+    <div class="wrap mediate">
+        @@include('./include/personalCenterLeftMenu.html')
+        <div class="personal-information rightMenu">
+            <div class="menu-header">
+                <h3>个人信息</h3>
+                <p>Personal Information</p>
+            </div>
+            <ul>
+                <li>
+                    <div class="icon icon-phone"></div>
+                    <div class="information">
+                        <p>
+                            手机号码：
+                            <span>132****8523</span>
+                        </p>
+                        <p>安全</p>
+                        <p>手机可以用于登录账号，重置密码或其它安全验证</p>
+                    </div>
+                    <a href="./personal-center-fix-phone.html">立即修改</a>
+                </li>
+                <li>
+                    <div class="icon icon-password"></div>
+                    <div class="information">
+                        <p>
+                            登录密码：
+                            <span>********</span>
+                        </p>
+                        <p>用于保护账号信息和登录安全</p>
+                    </div>
+                    <a href="./personal-center-fix-code.html">立即修改</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <!--end wrap-->
-	@@include('./include/footer.html')
+    @@include('./include/footer.html')
     <script src="./js/personal-center.js"></script>
 </body>
+
 </html>

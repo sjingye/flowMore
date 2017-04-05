@@ -1,0 +1,116 @@
+// 设置编码格式
+@charset "utf-8";
+// 引入外部文件
+@import "./reset.scss";
+@import "./global.scss";
+@import "./common.scss";
+@import "./personal-center-common.scss";
+body {
+    position: relative;
+    transition: all .5s;
+}
+
+.header-bg {
+    width: 100%;
+    height: 360px;
+    position: absolute;
+    left: 0;
+    top: 94px;
+    background: url(../images/valuation-stage-header-bg.jpg) no-repeat 0 0;
+    // filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(enabled=Enabled, sizingMethod=scale, src=URL);
+    background-size: cover;
+    z-index: -1;
+}
+
+.wrap-header {
+    width: 1160px;
+    height: 110px;
+    em,
+    span {
+        display: block;
+    }
+    em {
+        float: left;
+        width: 800px;
+        height: 71px;
+        margin-top: 30px;
+        &.grownup-cn {
+            background: url(../images/valuation-stage-grownup-bg-cn.png) 0 0 no-repeat;
+        }
+        &.grownup-en {
+            background: url(../images/valuation-stage-grownup-bg-en.png) 0 0 no-repeat;
+        }
+        &.senior-cn {
+            background: url(../images/valuation-stage-senior-bg-cn.png) 0 0 no-repeat;
+        }
+        &.senior-en {
+            background: url(../images/valuation-stage-senior-bg-en.png) 0 0 no-repeat;
+        }
+    }
+    span {
+        float: right;
+        width: 140px;
+        height: 100px;
+        margin: 10px 44px 0 0;
+        &.cn {
+            background: url(../images/people.png) 0 0 no-repeat;
+        }
+        &.en {
+            background: url(../images/people-en.png) 0 0 no-repeat;
+        }
+    }
+}
+
+.container {
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    padding: 50px 0 0px;
+    width: 1160px;
+    .container-title {
+        width: 1160px;
+        font-size: 30px;
+        color: #3c3c3c;
+        text-align: center;
+    }
+}
+
+.valuation-methods-list {
+    overflow: hidden;
+    margin: 50px 76px 44px;
+    width: 1008px;
+    li {
+        width: 454px;
+        height: 518px;
+        background-color: #ececec;
+        float: left;
+        margin: 0 25px;
+        position: relative;
+        img {
+            width: 454px;
+            height: 230px;
+        }
+        p {
+            width: 422px;
+            margin: 16px 16px 0;
+            text-indent: 2em;
+            font-size: 16px;
+            line-height: 1.8em;
+            color: #3b3b3b;
+        }
+        a {
+            display: block;
+            width: 454px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: $mainColor;
+            cursor: pointer;
+        }
+    }
+}

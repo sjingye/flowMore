@@ -5,81 +5,103 @@
 @import "./global.scss";
 @import "./common.scss";
 @import "./personal-center-common.scss";
+.personal-center-header {
+    background-color: #f3f3f3;
+}
 
-.valuation-history{
-     table{
-          width: 920px;
-          margin: 26px auto 22px;
-          text-align: center;
-          thead{
-               text-align: center;
-               background-color: #EDEDED;
-               th{
+.personal-wrap {
+    margin: 0 auto;
+}
+
+.valuation-history {
+    position: relative;
+    table {
+        width: 920px;
+        margin: 26px auto 10px;
+        text-align: center;
+        table-layout: fixed;
+        thead {
+            width: 920px;
+            text-align: center;
+            background-color: #EDEDED;
+            tr {
+                width: 920px;
+            }
+            th {
+                text-align: center;
+                height: 50px;
+                line-height: 50px;
+                font-size: 20px;
+                color: #333;
+                font-weight: bold;
+            }
+        }
+        tbody {
+            width: 920px;
+            tr {
+                width: 920px;
+                height: 48px;
+                &.even {
+                    background-color: #FFF3F3;
+                }
+                &.odd {
+                    background-color: #FFF;
+                }
+                td {
+                    font-size: 14px;
+                    line-height: 48px;
                     text-align: center;
-                    height: 50px;
-                    line-height: 50px;
-                    font-size: 20px;
                     color: #333;
-                    font-weight: bold;
-               }
-          }
-          tbody{
-               tr{
-                   height: 48px;
-                   &.even{
-                         background-color: #FFF3F3;
-                   }
-                   &.odd{
-                         background-color: #FFF;
-                   }
-                   td{
-                         font-size: 14px;
-                         line-height: 48px;
-                         text-align: center;
-                         color: #333;
-                         a{
-                              color: $mainColor;
-                              text-align: center;
-                              &:hover{
-                                border: 1px solid $mainColor;
-                              }
-                         }
-                   }
-                   td.last{
-                         text-align: center;
-                         a{
-                              text-align: right;
-                              display: block;
-                              width: 88px;
-                              height: 48px; 
-                         }
-                   }
-                   .professional-download{
-                      background: url(../images/download.png) no-repeat 0px 10px;
-                   } 
-               }
-          }
-     }
-     .paginate-container{
-          position: absolute;
-          bottom: 20px;
-          left: 0px;
-          width: 960px;
-          height: 28px;
-          line-height: 28px;
-          text-align: center;
-          >a{
-               display: inline-block;
-               border: 1px solid #aaa;
-               padding: 0px 6px;
-               margin: 0 6px;
-               color: $mainFontColor;
-               &.active,
-               &:hover{
-                    border: none;
-                    color: #fff;
-                    background-color: $mainColor;
-               }
-          }
-     }
+                    padding: 0 6px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -o-text-overflow: ellipsis;
+                    a {
+                        color: $mainColor;
+                        text-align: center;
+                    }
+                }
+                td.last {
+                    text-align: center;
+                    opacity: 0;
+                    a {
+                        text-align: right;
+                        display: block;
+                        width: 88px;
+                        height: 48px;
+                        background: url(../images/download.png) no-repeat 0px 10px;
+                    }
+                }
+                &.professional {
+                    td.last {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#paginate-container {
+    position: absolute;
+    // bottom: 20px;
+    left: 0px;
+    width: 960px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    /*  >a{
+        display: inline-block;
+        border: 1px solid #aaa;
+        padding: 0px 6px;
+        margin: 0 6px;
+        color: $mainFontColor;
+        &.active,
+        &:hover{
+             border: none;
+             color: #fff;
+             background-color: $mainColor;
+        }
+   } */
 }

@@ -2,30 +2,48 @@
 // 引入外部文件
 @import "global.scss";
 // common-header通用部分
-.common-header{
+.common-header {
     min-width: $mainWidth;
     box-sizing: border-box;
     padding: 0 40px;
     height: 94px;
-    background-color: #F3F3F3;
-    box-shadow: 0 0  4px 2px #909090;
-    .common-logo{
+    background-color: #fff;
+    box-shadow: 0 0 4px 2px #909090;
+    .common-logo {
         display: block;
         width: 294px;
         height: 85px;
-        margin-top:4px;
-        background: url("../images/logo-other.png") no-repeat 0 0;
+        margin-top: 4px;
+        &.cn {
+            background: url("../images/logo-other.png") no-repeat 0 0;
+        }
+        &.en {
+            background: url("../images/logo-other-en.png") no-repeat 0 0;
+        }
     }
-    .guide{
-        display: block;
-        width: 134px;
+    .guide {
         height: 24px;
-        margin-top:35px;
+        overflow: hidden;
+        text-align: right;
+        margin-top: 35px;
         font-size: 16px;
-        color: #3B3B3B;
-        background: url("../images/guide-arrow.png") no-repeat 116px 2px;
+        a {
+            color: #3B3B3B;
+            display: block;
+            float: right;
+        }
+        a:hover {
+            color: $mainColor;
+            text-decoration: underline;
+        }
+        .arrow {
+            width: 20px;
+            height: 20px;
+            background: url("../images/guide-arrow.png") no-repeat 0px 2px;
+        }
     }
 }
+
 // footer通用部分
 .footer {
     margin: 0px auto 0;
@@ -35,7 +53,7 @@
     .footer-wrap {
         box-sizing: border-box;
         width: $mainWidth;
-        height: 210px;
+        height: 230px;
         padding: 44px 50px 24px;
         color: #3B3B3B;
     }
@@ -46,14 +64,15 @@
     }
     .service-time {
         width: 256px;
-        height: 132px;
+        height: 152px;
         margin: 0px 0 0 24px;
         border-right: 1px solid #B4B4B4;
         h2 {
-            font-size: 30px;
+            font-size: 24px;
             font-weight: 500;
             line-height: 1.2em;
             margin-top: 10px;
+            color: $mainFontColor;
         }
         p {
             font-size: 14px;
@@ -64,13 +83,14 @@
         height: 132px;
         padding-left: 24px;
         ul {
-            margin-bottom: 10px;
+            margin-bottom: 30px;
             overflow: hidden;
             li {
                 font-size: 16px;
                 color: #3B3B3B;
                 margin-right: 40px;
                 float: left;
+                cursor: pointer;
                 &:hover {
                     color: $mainColor;
                     font-weight: 560;
@@ -79,6 +99,13 @@
         }
         p {
             margin-top: 6px;
+        }
+        a {
+            color: $mainFontColor
+        }
+        a:hover {
+            color: $mainColor;
+            text-decoration: underline;
         }
     }
     .qr-code-sec {

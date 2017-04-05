@@ -1,82 +1,83 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
-    <meta name="keywords" content="欢迎注册心流网"/>
-    <meta name="description" content="注册心流网，给您最专业的企业估值，投融资建议！"/>
+    <meta name="keywords" content="欢迎注册心流网" />
+    <meta name="description" content="注册心流网，给您最专业的企业估值，投融资建议！" />
     <script src="./lib/jquery.min.js"></script>
-    <script src="./js/jquery.idcode.js"></script>
-    <!-- <script src="./lib/jquery.idcode.js"></script> -->
-    <link type="text/css" href="jquery.idcode.css" />
+    <script src="./lib/jquery.placeholder.js"></script>
     <link rel="stylesheet" href="./css/logup.css">
     <title>logup</title>
 </head>
+
 <body>
-    @@include('include/header.html')
+    @@include('./include/log-header.html')
     <div class="wrap">
         <div class="login-box-header">
             <h2 class="fl">创建账户</h2>
             <a href="./login.html" class="log-remind-msg fr">已有账号，去登录</a>
         </div>
         <div class="logup-box">
-            <form class="form-inline" role="form">
+            <form class="form-inline" role="form" action="">
                 <div class="form-group">
                     <label class="form-label"></label>
-                    <input type="text" class="logup-inp-phone logup-inp-0 form-control" placeholder="请输入手机号码">
+                    <input type="text" class="logup-inp-phone form-control" placeholder="请输入手机号码">
                 </div>
                 <div class="form-group">
-                    <!--<label class="form-label"></label>-->
-                    <input type="text" class="login-inp-phone-code logup-inp-1 form-control" placeholder="请输入验证码" id="ehong-code-input" maxlength="4">
-                    <span id="idcode"></span>
+                    <input type="text" class="logup-inp-identifying-code form-control" placeholder="请输入验证码" maxlength="4">
+                    <!-- <span id="idcode"></span> -->
                 </div>
                 <div class="form-group">
                     <label class="form-label"></label>
-                    <input type="text" class="logup-inp-phone-code logup-inp-2 form-control" placeholder="请输入手机验证码">
+                    <input type="text" class="logup-inp-phone-code form-control" placeholder="请输入手机验证码">
                     <input type="button" value="手机验证码" class="form-button">
                 </div>
                 <div class="form-group">
                     <label class="form-label"></label>
-                    <input type="text" class="logup-inp-code logup-inp-3 form-control" placeholder="请设置登录密码">
+                    <input type="text" class="logup-inp-code  form-control" placeholder="请设置登录密码">
                 </div>
                 <div class="form-group">
                     <label class="form-label"></label>
-                    <input type="text" class="logup-inp-code-qy logup-inp-4 form-control" placeholder="请再次输入，确认密码">
+                    <input type="text" class="logup-inp-code-qy  form-control" placeholder="请再次输入，确认密码">
                 </div>
             </form>
             <div class="about-logup">
                 <input type="checkbox" name="" id="" class="checkbox">
                 <p>
                     阅读并同意
-                    <a href="">《心流网注册协议》</a>
-                    和
-                    <a href="">《免费声明》</a>
+                    <a href="javascript:;">《心流网注册协议》</a> 和
+                    <a href="javascript:;">《免费声明》</a>
                 </p>
             </div>
             <input type="button" value="立即注册" class="logup-button">
             <ul>
-                <li id="remind-0">请输入手机号</li>
-                <li id="remind-1">请输入正确的验证码</li>
-                <li id="remind-2">请输入手机验证码</li>
-                <li id="remind-3">长度为4到16个字符，支持大小写字母、数字和标点符号，不允许有空格</li>
-                <li id="remind-4">请输入与上次相同的密码</li>
+                <li id="logup-inp-phone-remind">请输入手机号</li>
+                <li id="logup-inp-identifying-code-remind">请输入正确的验证码</li>
+                <li id="logup-inp-phone-code-remind">请输入手机验证码</li>
+                <li id="logup-inp-code-remind">长度为4到16个字符，支持大小写字母、数字和标点符号，不允许有空格</li>
+                <li id="logup-inp-code-qy-remind">请输入与上次相同的密码</li>
             </ul>
         </div>
     </div>
     <div class="more">
         <div class="mask"></div>
         <div class="registration-greement popup-box">
-            <h2>心流网注册协议</h2>
-            <strong class="close">X</strong>
+            <h2>
+                心流网注册协议
+                <strong class="close">X</strong>
+            </h2>
+
             <div class="item">
                 <p class="text-02">
                     本服务协议（以下简称“本协议”）由您个人或您所代表的单位（以下统称“您”）和心流（上海）文化传媒有限公司（以下简称 “本公司”）签订，请仔细阅读本协议。
                 </p>
                 <p class="text-02">心流网服务（以下简称“本服务”）是指由本公司以及本公司关联方通过心流网网站（即www.flcccc.com等域名所指向的网站）、微信、APP或其他平台或软件、应用程序等（以下统称“心流网”）以在线或线下方式向用户提供的企业估值服务及其他相关服务，包括但不限于相关页面、内容、产品和服务。
                 </p>
-                <p class="text-02">本协议中，关联方包括关联公司和关联人以及通过心流网向您提供内容、产品或服务的第三方。在出现下列任一情况时，任何实体应被视为本协议相关一方的关联公司、关联人：（1）直接或间接控制本协议一方、被本协议一方控制或与本协议一方同受其他主体控制的任何实体；或（2）任何实体的注册资本、投票权、股权或决策权的百分之十（10%）或以上由本协议一方直接或间接拥有（反之亦然）；或（3）本协议一方通过合同、董事职位或其他方式指导、影响或制定该实体的决策、发展、管理和政策的方向（反之亦然）；或（4）由本协议一方的关联人担任董事、合伙人、股东、高管的任何实体；“关联人”是指自然人的近亲属，包括父母、配偶、亲兄弟姐妹及其配偶、成年子女及其配偶。 </p>
+                <p class="text-02">本协议中，关联方包括关联公司和关联人以及通过心流网向您提供内容、产品或服务的第三方。在出现下列任一情况时，任何实体应被视为本协议相关一方的关联公司、关联人：（1）直接或间接控制本协议一方、被本协议一方控制或与本协议一方同受其他主体控制的任何实体；或（2）任何实体的注册资本、投票权、股权或决策权的百分之十（10%）或以上由本协议一方直接或间接拥有（反之亦然）；或（3）本协议一方通过合同、董事职位或其他方式指导、影响或制定该实体的决策、发展、管理和政策的方向（反之亦然）；或（4）由本协议一方的关联人担任董事、合伙人、股东、高管的任何实体；“关联人”是指自然人的近亲属，包括父母、配偶、亲兄弟姐妹及其配偶、成年子女及其配偶。
+                </p>
                 <p class="ptit">一、总则 </p>
                 <p class="text-01">1、您确认：在您注册成为心流网用户以接受本服务之前，您已充分阅读、理解并接受本协议的全部内容，一旦您选择“同意”并完成注册进行购买或使用本服务（包括浏览网页，制作、下载或上传文件等各种使用心流网的情形，下同），即表示您同意遵循本协议之所有约定。</p>
                 <p class="text-01">2、您同意，本公司有权随时对本协议内容进行单方面的变更，并以在心流网公告的方式予以公布，无需另行单独通知您；若您在本协议内容公告变更后继续使用本服务的，表示您已充分阅读、理解并接受修改后的协议内容，也将遵循修改后的协议内容使用本服务；若您不同意修改后的协议内容，您应停止使用本服务，否则应当由您自行承担因此产生的后果。</p>
@@ -176,4 +177,5 @@
     @@include('include/footer.html')
     <script src="./js/logup.js"></script>
 </body>
+
 </html>

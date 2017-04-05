@@ -1,12 +1,16 @@
+$(function () {
+    $('input, textarea').placeholder();
+});
+
 //提示框里的信息
-let message = {
+var message = {
     "old-code": {
         default: "请输入原密码",
-        wrong:"密码不正确",
+        wrong:"密码格式不正确",
         isRight: "false"
     },
     "new-code":{
-        default: "长度为4到16个字符，支持大小写字母、数字和标点符号，不允许有空格",
+        default: "长度为4到16个字符，支持大小写字母、数字，不允许有空格",
         wrong:"密码格式不正确",
         isRight: "false"
     },
@@ -18,10 +22,10 @@ let message = {
 }
 
 //dom
-let $textInp = $(".modify-details-wrap input[type='text']");     //dom：输入框内的input[type='text']
-let $reminds = $(".remind li");               //dom：右边的提示框
-let $submitButton = $(".submit-button");    //dom：提交按钮
-let classnames = ["old-code","new-code", "new-code-qy"];
+var $textInp = $(".modify-details-wrap input[type='text']");     //dom：输入框内的input[type='text']
+var $reminds = $(".remind li");               //dom：右边的提示框
+var $submitButton = $(".submit-button");    //dom：提交按钮
+var classnames = ["old-code","new-code", "new-code-qy"];
 
 //函数：表单验证、提醒、数据交互
 function regValue(classname) {
@@ -32,8 +36,8 @@ function regValue(classname) {
 
     switch(classname){
         case classnames[0]:
-            //与后台校验密码，得出布尔值结果
-            flag = !!($.cookie("password")===val);
+            //校验密码是否满足格式要求
+            flag = /^[A-Za-z0-9]{4,16}$/.test(val);
             break;
         case classnames[1]:
             //校验用户输入的密码是否满足要求
@@ -58,19 +62,19 @@ function regValue(classname) {
 //事件：为所有的输入框添加事件
 $textInp.on({
     focus: function(){
-        let allClass = this.className.split(" ");
-        let curClass = classnames[0];
+        var allClass = this.className.split(" ");
+        var curClass = classnames[0];
         for (let i = 0; i < allClass.length; i++) {
             if(classnames.indexOf(allClass[i]) != -1){
                curClass = allClass[i];
             }
         }
-        let $remind = $("#"+curClass+"-remind");
+        var $remind = $("#"+curClass+"-remind");
         $remind.removeClass().addClass("focus").html(message[curClass].default);
     },
     blur: function(){
-        let allClass = this.className.split(" ");
-        let curClass = classnames[0];
+        var allClass = this.className.split(" ");
+        var curClass = classnames[0];
         for (let i = 0; i < allClass.length; i++) {
             if(classnames.indexOf(allClass[i])>-1){
                curClass = allClass[i];
@@ -82,9 +86,9 @@ $textInp.on({
 
 //事件：为注册按钮添加事件
 $submitButton.click(function (event) {
-    let e = event || window.event;
+    var e = event || window.event;
     e.preventDefault();
-    let flag = classnames.every(function (item,index) {
+    var flag = classnames.every(function (item,index) {
         return message[index].isRight === "true";
     })
     if(flag){

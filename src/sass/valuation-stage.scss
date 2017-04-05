@@ -1,0 +1,395 @@
+$mainColor: #F5674B;
+$mainFontColor: #3b3b3b;
+body {
+    position: relative;
+    transition: all .5s;
+}
+
+.header-bg {
+    width: 100%;
+    height: 360px;
+    position: absolute;
+    left: 0;
+    top: 94px;
+    background: url(../images/valuation-stage-header-bg.jpg) no-repeat 0 0;
+    // filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(enabled=Enabled, sizingMethod=scale, src=URL);
+    background-size: cover;
+    z-index: -1;
+}
+
+.wrap {
+    margin-top: 0px;
+    width: 1160px;
+}
+
+.wrap-header {
+    height: 110px;
+    em,
+    span {
+        display: block;
+    }
+    em {
+        float: left;
+        width: 800px;
+        height: 71px;
+        margin-top: 30px;
+    }
+    span {
+        float: right;
+        width: 140px;
+        height: 100px;
+        margin: 10px 44px 0 0;
+        &.cn {
+            background: url(../images/people.png) 0 0 no-repeat;
+        }
+        &.en {
+            background: url(../images/people-en.png) 0 0 no-repeat;
+        }
+    }
+}
+
+.guide {
+    position: fixed;
+    right: 160px;
+    top: 340px;
+    width: 190px;
+    height: 300px;
+    z-index: 4;
+    background: transparent;
+    p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        height: 280px;
+        width: 56px;
+        background: url(../images/guide-shadow.png) 0 0 no-repeat;
+    }
+    ul {
+        position: absolute;
+        left: 26px;
+        top: 0;
+        width: 170px;
+        height: 300px;
+        li {
+            width: 140px;
+            height: 40px;
+            margin-bottom: 20px;
+            a {
+                width: 140px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                display: block;
+                font-size: 16px;
+                color: #3b3b3b;
+                background-color: #e5e7eb;
+                border-radius: 4px;
+                box-shadow: 0 2px 2px #eee;
+                &:hover,
+                &.hover {
+                    color: #fff;
+                    background-color: $mainColor;
+                    width: 158px;
+                    transition: width .5s;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    background-color: #fff;
+    overflow: hidden;
+    // height: 2000px;
+    position: relative;
+    padding: 50px 0 134px;
+    .container-title {
+        font-size: 30px;
+        color: #3c3c3c;
+        text-align: center;
+    }
+    .valuation-item {
+        width: 960px;
+        h3 {
+            width: 266px;
+            height: 36px;
+            margin: 40px 0;
+            p,
+            em {
+                display: block;
+                float: left;
+                text-align: center;
+            }
+            p {
+                width: 86px;
+                height: 36px;
+                line-height: 36px;
+                font-size: 16px;
+                color: #fff;
+                background: $mainColor;
+            }
+            em {
+                width: 178px;
+                height: 34px;
+                line-height: 34px;
+                border: 1px solid $mainColor;
+                font-size: 16px;
+                color: $mainColor;
+            }
+        }
+        .section {
+            margin: 40px 0 0 30px;
+            .row {
+                line-height: 20px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                p {
+                    margin-bottom: 10px;
+                }
+                ul {
+                    overflow: hidden;
+                    li {
+                        float: left;
+                        width: 25%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#company-base-infomation {
+    overflow: hidden;
+    table {
+        margin: 0px 0 0 30px;
+        float: left;
+        tr {
+            height: 56px;
+            margin: 6px 12px;
+            display: block;
+            label {
+                min-width: 160px;
+                text-align: right;
+                display: block;
+                float: left;
+            }
+            input[type="text"],
+            select {
+                box-sizing: border-box;
+                width: 358px;
+                height: 40px;
+                line-height: 40px;
+                text-indent: 8px;
+                border: 1px solid #aaa;
+                border-radius: 4px;
+                margin: 8px;
+            }
+            .upload-remind {
+                color: #666;
+            }
+            .top-remind {
+                color: $mainColor;
+                visibility: hidden;
+                &.focus {
+                    visibility: visible;
+                    text-indent: 0px;
+                    background-image: url('');
+                }
+                &.wrong {
+                    visibility: visible;
+                    text-indent: 20px;
+                    background: url("../images/wrong-remind.png") no-repeat 0 21px;
+                }
+                &.right {
+                    visibility: visible;
+                    text-indent: 20px;
+                    background: url("../images/right-remind.png") no-repeat 0 21px;
+                }
+            }
+        }
+    }
+    .company-base-infomation-remind {
+        float: left;
+        margin-top: 40px;
+        height: 378px;
+        background: #000;
+        li {
+            height: 56px;
+            line-height: 56px;
+            margin: 6px 0;
+            font-size: 14px;
+            color: $mainColor;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+}
+
+.completed {
+    display: block;
+    width: 160px;
+    height: 36px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    background-color: $mainColor;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -80px;
+    cursor: pointer;
+}
+
+.mask {
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    visibility: hidden;
+}
+
+.uncompleted-remind {
+    visibility: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -150px;
+    z-index: 8;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid $mainColor;
+    border-radius: 4px;
+    p {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 10px;
+        strong {
+            float: left;
+            font-size: 16px;
+        }
+        span {
+            float: right;
+            cursor: pointer;
+            padding: 0 8px;
+        }
+    }
+    div {
+        background-color: #fff;
+        height: 80px;
+        span,
+        em {
+            display: block;
+            float: left;
+            margin-top: 20px;
+        }
+        span {
+            width: 42px;
+            height: 42px;
+            margin: 18px 8px 0 10px;
+            background: url(../images/valuation-stage-remind.png) 0 0 no-repeat;
+        }
+        em {
+            width: 220px;
+        }
+    }
+    h3 {
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        margin-left: -112px;
+        width: 224px;
+        height: 60px;
+        line-height: 60px;
+        span {
+            display: inline-block;
+            width: 80px;
+            height: 24px;
+            line-height: 24px;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 4px;
+            background: #999;
+            text-align: center;
+            margin: 0 14px;
+            cursor: pointer;
+            &.active,
+            &:hover {
+                background: $mainColor;
+            }
+            // float: left;
+        }
+    }
+}
+
+.upload-wrapper {
+    display: block;
+    margin: 8px;
+    position: relative;
+    float: left;
+    span {
+        display: block;
+        width: 120px;
+        height: 38px;
+        line-height: 38px;
+        border-radius: 4px;
+        background-color: $mainColor;
+        color: #fff;
+        font-size: 14px;
+        em {
+            width: 20px;
+            height: 20px;
+            margin: 10px 10px 0 10px;
+            display: block;
+            float: left;
+            background-image: url(../images/upload.png);
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+        }
+        span {
+            display: block;
+            float: left;
+            width: 70px;
+            height: 38px;
+        }
+    }
+    input[type="file"] {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        cursor: pointer;
+    }
+}
+
+.remind {
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    margin: 8px 20px 0;
+    float: left;
+}
+
+.download-report {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 32px;
+    color: $mainColor;
+    display: block;
+    background: url(../images/download.png) 0 7px no-repeat;
+    &:hover {
+        text-decoration: underline;
+    }
+}

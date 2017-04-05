@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <script src="./lib/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/contact-us.css">
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=v8KsE3KK9Y86rxVZ8b7Gb7zoYEFCPAd3"></script>
+    <script src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="./css/SearchInfoWindow_min.css">
+    <title>contact-us</title>
+</head>
+
+<body>
+    @@include('./include/personalCenterHeader.html')
+    <div class="wrap mediate">
+        @@include('./include/about-flow-left-menu.html')
+        <div class="contact-us rightMenu">
+            <div class="menu-header">
+                <h3>联系我们</h3>
+                <p>Contact Us</p>
+            </div>
+            <div id="map">
+
+            </div>
+            <div class="customer-service section">
+                <h3> >>客服路线：</h3>
+                <p>如果您在心流网遇到问题，请联系客服。</p>
+                <p>
+                    <em>联系电话：</em>
+                    <span>+86 (10)8444-6598</span>
+                </p>
+                <p>
+                    <em>联系QQ：</em>
+                    <span>29075456</span>
+                </p>
+                <p>
+                    <em>公司地址：</em>
+                    <span>北京市朝阳区亮马桥路甲40号二十一世纪大厦B座309室</span>
+                </p>
+                <p>
+                    <em>公司网站：</em>
+                    <span>
+						<a href="www.flcccc.com ">www.flcccc.com</a>
+					</span>
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--end wrap-->
+    @@include('./include/footer.html')
+    <script src="./js/contact-us.js"></script>
+</body>
+
+</html>

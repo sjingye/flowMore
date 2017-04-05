@@ -1,14 +1,18 @@
 "use strict";
 
+$(function () {
+    $('input, textarea').placeholder();
+});
+
 //提示框里的信息
 var message = {
     "old-code": {
         default: "请输入原密码",
-        wrong: "密码不正确",
+        wrong: "密码格式不正确",
         isRight: "false"
     },
     "new-code": {
-        default: "长度为4到16个字符，支持大小写字母、数字和标点符号，不允许有空格",
+        default: "长度为4到16个字符，支持大小写字母、数字，不允许有空格",
         wrong: "密码格式不正确",
         isRight: "false"
     },
@@ -34,8 +38,8 @@ function regValue(classname) {
 
     switch (classname) {
         case classnames[0]:
-            //与后台校验密码，得出布尔值结果
-            flag = !!($.cookie("password") === val);
+            //校验密码是否满足格式要求
+            flag = /^[A-Za-z0-9]{4,16}$/.test(val);
             break;
         case classnames[1]:
             //校验用户输入的密码是否满足要求

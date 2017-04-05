@@ -1,5 +1,9 @@
 "use strict";
 
+$(function () {
+    $('input, textarea').placeholder();
+});
+
 //提示框里的信息
 var message = [{
     wrong: "手机号码格式不正确",
@@ -23,7 +27,7 @@ function regValue(num) {
 
     switch (parseInt(num)) {
         case 0:
-            flag = /^1[0-9]{10}$/.test(val);
+            flag = /^1[34578]\d{9}$/.test(val);
             break;
         case 1:
             flag = /^[A-Za-z0-9]{4,16}$/.test(val);

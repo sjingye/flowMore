@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
     <script src="./lib/jquery.min.js"></script>
     <script src="./lib/laypage.js"></script>
-    <script src="./lib/jquery.cookie.js"></script>
     <link rel="stylesheet" href="./css/valuation-history.css">
-	<title>valuation-history</title>
+    <link rel="stylesheet" href="./lib/laypage.css">
+    <title>valuation-history</title>
 </head>
+
 <body>
     @@include('./include/personalCenterHeader.html')
-	<div class="wrap mediate">
-		<div class="personal-center-left-menu">
-            <ul>
-                <li>
-                    <a href="./personal-center.html" >个人信息</a>
-                </li>
-                <li>
-                    <a href="./valuation-history.html" class="active">估值历史</a>
-                </li>
-            </ul>
-        </div>
-		<div class="valuation-history rightMenu active">
+    <div class="wrap mediate">
+        @@include('./include/personalCenterLeftMenu.html')
+        <div class="valuation-history rightMenu active">
             <div class="menu-header">
                 <h3>估值历史</h3>
                 <p>Valuation History</p>
@@ -39,106 +31,25 @@
                     <th></th>
                 </thead>
                 <tbody class="valuation-tbody">
-                    <tr class="even">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>专业估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href="" class="professional-download">下载报告</a>
-                        </td>
-                    </tr>
-                    <tr class="odd">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>快速估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href="">下载报告</a>
-                        </td>
-                    </tr>
-                    <tr class="even">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>专业估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href=""  class="professional-download">下载报告</a>
-                        </td>
-                    </tr>
-                    <tr class="odd">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>快速估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href="">下载报告</a>
-                        </td>
-                    </tr>
-                    <tr class="even">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>快速估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href="">下载报告</a>
-                        </td>
-                    </tr>
-                    <tr class="odd">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>快速估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href="">下载报告</a>
-                        </td>
-                    </tr>
-                    <tr class="even">
-                        <td>心流</td>
-                        <td>20160215</td>
-                        <td>800万-1000万</td>
-                        <td>专业估值</td>
-                        <td>
-                            <a href="./valuation-history-item.html">详情</a>
-                        </td>
-                        <td class="last">
-                            <a href=""  class="professional-download">下载报告</a>
-                        </td>
-                    </tr>
+
                 </tbody>
             </table>
-            <div class="paginate-container">
-                <a>首页</a>
-                <a>上一页</a>
-                <a href="">1</a>
-                <a href="">2</a>
-                <a href="">3</a>
-                <a href="">……</a>
-                <a>下一页</a>
-                <a>尾页</a>
+            <div id="paginate-container">
+                <!-- <a>首页</a>
+                    <a>上一页</a>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">……</a>
+                    <a>下一页</a>
+                    <a>尾页</a> -->
             </div>
         </div>
-	</div>
-<!-- </div> -->
-@@include('./include/footer.html')
-<!--<script src="./js/valuation-history.js"></script>-->
+    </div>
+
+    <!-- </div> -->
+    @@include('./include/footer.html')
+    <!-- <script src="./js/valuation-history.js"></script> -->
 </body>
+
 </html>

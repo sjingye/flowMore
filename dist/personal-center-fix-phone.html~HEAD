@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="./css/personal-center.css">
+	<title>personal-center-fix-phone</title>
+</head>
+<body>
+	<div class="personal-center-header">
+	<div class="nav mediate">
+	    <img src="./images/logo-other.png" alt="logo" class="logo fl">
+	    <div class="apply fr">
+	        <div class="language">
+	            <div class="chinese">English</div>
+	            <div class="english">中文</div>
+	        </div>
+	        <div class="user">
+	            <a href="./logout.html" class="logout">退出</a>
+	            <p class="user-name">
+	            	您好，
+	            	<span>13587962356</span>
+	            </p>
+	            
+	        </div>
+	    </div>
+	</div>
+</div>
+<!-- end header -->
+	<div class="wrap mediate">
+		<div class="personal-center-left-menu">
+	<ul>
+		<li>
+            <a href="./personal-center.html" class="active">个人信息</a>
+        </li>
+		<li>
+            <a href="./valuation-history.html">估值历史</a>
+        </li>
+	</ul>
+</div>
+
+        <div class="modify-phone-number rightMenu fixInfomation">
+            <div class="menu-header">
+                <h3>修改手机号</h3>
+                <p>Modify Phone Number</p>
+            </div>
+            <div class="modify-details">
+                <h3>修改手机号码</h3>
+                <div class="modify-details-wrap">
+                    <form action="#">
+                        <p>
+                            <label for="">原手机号:</label>
+                            <input type="text" name="" class="old-phone gn" placeholder="请输入原手机号">
+                        </p>
+                        <p>
+                            <label for="">验证码:</label>
+                            <input type="text" name="" class="verification-code-old" placeholder="请输入原手机号获取的验证码">
+                            <input type="button" value="手机验证码">
+                        </p>
+                        <p>
+                            <label for="">新手机号:</label>
+                            <input type="text" name="" class="new-phone" placeholder="请输入新手机号">
+                        </p>
+                        <p>
+                            <label for="">验证码:</label>
+                            <input type="text" name="" class="verification-code-new" placeholder="请输入新手机号获取的验证码">
+                            <input type="button"  value="手机验证码">
+                        </p>
+                    </form>
+                    <ul class="remind">
+                        <li id="old-phone-remind"></li>
+                        <li id="verification-code-old-remind"></li>
+                        <li id="new-phone-remind"></li>
+                        <li id="verification-code-new-remind"></li>
+                    </ul>
+                    <input type="button" value="提交" class="submit-button">
+                </div>
+                <!-- end  modify-details-wrap -->
+            </div>
+        </div>
+        <!-- end modify-phone-number -->
+	</div>  
+    <!--end wrap-->
+	<div class="footer">
+    <div class="footer-wrap mediate">
+        <div class="custom-service fl"></div>
+        <div class="service-time fl">
+            <h2>86108444-6598 </h2>
+            <p>服务时间：09:00-22:00</p>
+        </div>
+        <div class="company-service fl">
+            <ul>
+                <li>行业资讯 </li>
+                <li>创服机构</li>
+                <li>合作伙伴</li>
+                <li>关于我们</li>
+                <li>免责条款</li>
+            </ul>
+            <p>公司邮箱：email:service@flcccc.com</p>
+            <p>联系QQ：29075456</p>
+            <p>公司地址：北京市朝阳区亮马桥路甲40号二十一世纪大厦B座309室 </p>
+            <p>版权所属版权所属版权所属</p>
+        </div>
+        <div class="qr-code-sec fr">
+            <div class="qr-code"></div>
+            <p>微信公众号</p>
+        </div>
+    </div>
+</div>
+<!--end footer-->
+    <script src="./js/personal-center-fix-phone.js"></script>
+</body>
+</html>

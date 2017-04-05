@@ -26,7 +26,7 @@ td {
 body {
   background: #F3F3F3;
   min-width: 1160px;
-  font: 14px/1.5  Microsoft YaHei,tahoma,arial,Hiragino Sans GB,sans-serif;
+  font: 14px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, sans-serif;
   color: #3b3b3b; }
 
 table {
@@ -77,6 +77,9 @@ a {
 input {
   border: none; }
 
+html {
+  min-width: 1160px; }
+
 .fr {
   float: right; }
 
@@ -96,6 +99,9 @@ input {
 
 .placeholder {
   color: #aaa; }
+
+html {
+  min-width: 1160px; }
 
 .fr {
   float: right; }
@@ -122,22 +128,34 @@ input {
   box-sizing: border-box;
   padding: 0 40px;
   height: 94px;
-  background-color: #F3F3F3;
-  box-shadow: 0 0  4px 2px #909090; }
+  background-color: #fff;
+  box-shadow: 0 0 4px 2px #909090; }
   .common-header .common-logo {
     display: block;
     width: 294px;
     height: 85px;
-    margin-top: 4px;
-    background: url("../images/logo-other.png") no-repeat 0 0; }
+    margin-top: 4px; }
+    .common-header .common-logo.cn {
+      background: url("../images/logo-other.png") no-repeat 0 0; }
+    .common-header .common-logo.en {
+      background: url("../images/logo-other-en.png") no-repeat 0 0; }
   .common-header .guide {
-    display: block;
-    width: 134px;
     height: 24px;
+    overflow: hidden;
+    text-align: right;
     margin-top: 35px;
-    font-size: 16px;
-    color: #3B3B3B;
-    background: url("../images/guide-arrow.png") no-repeat 116px 2px; }
+    font-size: 16px; }
+    .common-header .guide a {
+      color: #3B3B3B;
+      display: block;
+      float: right; }
+    .common-header .guide a:hover {
+      color: #F5674B;
+      text-decoration: underline; }
+    .common-header .guide .arrow {
+      width: 20px;
+      height: 20px;
+      background: url("../images/guide-arrow.png") no-repeat 0px 2px; }
 
 .footer {
   margin: 0px auto 0;
@@ -147,7 +165,7 @@ input {
   .footer .footer-wrap {
     box-sizing: border-box;
     width: 1160px;
-    height: 210px;
+    height: 230px;
     padding: 44px 50px 24px;
     color: #3B3B3B; }
   .footer .custom-service {
@@ -156,14 +174,15 @@ input {
     background: url(../images/custom-service.png) no-repeat 0 0; }
   .footer .service-time {
     width: 256px;
-    height: 132px;
+    height: 152px;
     margin: 0px 0 0 24px;
     border-right: 1px solid #B4B4B4; }
     .footer .service-time h2 {
-      font-size: 30px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 1.2em;
-      margin-top: 10px; }
+      margin-top: 10px;
+      color: #3b3b3b; }
     .footer .service-time p {
       font-size: 14px; }
   .footer .company-service {
@@ -171,18 +190,24 @@ input {
     height: 132px;
     padding-left: 24px; }
     .footer .company-service ul {
-      margin-bottom: 10px;
+      margin-bottom: 30px;
       overflow: hidden; }
       .footer .company-service ul li {
         font-size: 16px;
         color: #3B3B3B;
         margin-right: 40px;
-        float: left; }
+        float: left;
+        cursor: pointer; }
         .footer .company-service ul li:hover {
           color: #F5674B;
           font-weight: 560; }
     .footer .company-service p {
       margin-top: 6px; }
+    .footer .company-service a {
+      color: #3b3b3b; }
+    .footer .company-service a:hover {
+      color: #F5674B;
+      text-decoration: underline; }
   .footer .qr-code-sec .qr-code {
     width: 118px;
     height: 118px;
@@ -192,6 +217,9 @@ input {
     color: #3B3B3B;
     text-align: center;
     margin-top: 2px; }
+
+.common-header {
+  background: #f3f3f3; }
 
 .login-banner-sec {
   height: 622px;
@@ -207,16 +235,18 @@ input {
     .login-banner-sec .login-banner-wrap ul {
       position: absolute;
       text-align: left;
-      right: 10px;
+      right: 36px;
       top: 236px; }
       .login-banner-sec .login-banner-wrap ul li {
         visibility: hidden;
         height: 54px;
-        line-height: 54px;
+        width: 140px;
+        box-sizing: border-box;
+        line-height: 27px;
         color: #FF2C02;
         font-size: 14px;
-        text-indent: 18px;
-        background: url("../images/wrong-remind.png") no-repeat 0 21px; }
+        padding-left: 18px;
+        background: url("../images/wrong-remind.png") no-repeat 0px 21px; }
   .login-banner-sec .login-ad {
     position: absolute;
     width: 360px;
@@ -228,7 +258,7 @@ input {
     height: 330px;
     padding: 0 24px 0;
     position: absolute;
-    right: 160px;
+    right: 180px;
     top: 146px;
     border-radius: 2px;
     background-color: #fff; }
@@ -270,13 +300,19 @@ input {
         height: 16px;
         display: block;
         float: left;
-        margin-top: 7px; }
+        margin-top: 7px;
+        cursor: pointer; }
       .login-banner-sec .login-box .about-password p {
         margin-left: 4px;
         line-height: 30px;
         float: left; }
-      .login-banner-sec .login-box .about-password em {
-        float: right; }
+      .login-banner-sec .login-box .about-password a {
+        float: right;
+        color: #3b3b3b;
+        cursor: pointer; }
+      .login-banner-sec .login-box .about-password a:hover {
+        color: #F5674B;
+        text-decoration: underline; }
     .login-banner-sec .login-box .login-button {
       width: 472px;
       height: 48px;
@@ -284,7 +320,7 @@ input {
       line-height: 48px;
       font-size: 24px;
       text-align: center;
-      font-weight: 600;
       border-radius: 4px;
       color: #fff;
-      background-color: #F5674B; }
+      background-color: #F5674B;
+      cursor: pointer; }
